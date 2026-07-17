@@ -1,0 +1,238 @@
+\documentclass[english,letterpaper,12pt]{article}
+%\documentclass[ecta,nameyear,draft]{econsocart}
+%
+%\usepackage{}
+%\RequirePackage[colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue,pagebackref]{hyperref}
+%\usepackage[section]{placeins}
+%\documentclass[mnsc,blindrev]{informs3}
+%\usepackage[a4paper,left=2.5cm,right=2.5cm,top=3cm,bottom=3.2cm]{geometry}
+%\usepackage[a4paper,left=2.8575cm,right=2.8575cm,top=2.8575cm,bottom=2.8575cm]{geometry}
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=2.8575cm,bottom=2.8575cm]{geometry}
+\usepackage{lscape}
+\usepackage{enumitem}
+\usepackage{multirow}
+
+
+
+\usepackage[utf8]{inputenc}
+%\usepackage{csquotes}
+%\usepackage{makecell}
+\usepackage{graphicx, color}
+\usepackage{amsmath,amsthm,amssymb}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newtheorem{definition}{Definition}
+\usepackage{afterpage}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{tabularx,ltxtable,longtable,tabu,float,caption,booktabs,dcolumn,eurosym,lscape,authblk,setspace}
+\usepackage[font=footnotesize]{caption}
+\renewcommand{\footnoterule}{%
+  \vspace{4pt}
+  \hrule width \textwidth
+}
+
+\usepackage{tabularx}
+\usepackage{varwidth}
+\usepackage{pdflscape}
+\usepackage{framed}
+\usepackage[flushleft]{threeparttable}
+%\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[multiple]{footmisc}
+\newcolumntype{d}{D{.}{.}{2.5}}
+\newcolumntype{s}{D{.}{.}{1.2}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{y}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\usepackage[comma,authoryear]{natbib}
+\widowpenalty=15000
+\clubpenalty=15000
+\bibpunct{(}{)}{;}{a}{,}{,}
+\bibliographystyle{jpe}
+% new from old tex
+%\usepackage[capposition=top]{floatrow}
+\usepackage[pdfborder={0 0 0}, linkcolor=black, urlcolor=blue, citecolor=black, colorlinks=true,hyperfootnotes=false]{hyperref}
+
+\usepackage{amsthm}
+\usepackage{array,multirow}
+
+\newtheorem*{remark}{Remark}
+\newtheorem{prop}{Proposition}
+\newtheorem{corollary}{Corollary}
+\usepackage{xr}
+\usepackage{comment}
+\newcommand{\sym}[1]{#1}
+
+
+
+
+\title{Beliefs and the Incentive Effects of Preferential College Admissions: Evidence from an Experiment and a Structural Model \thanks{This paper was perviously circulated under the title ``College Access when Preparedness Matters: New Evidence from Large Advantages in College Admissions". We thank: project consultant Ranjita Rajan; the Chilean Ministry of Education, in particular, Jaumet Bachs, Mar\'{i}a Paz Fern\'{a}ndez, Javier Guevara, Felipe Melo, Mar\'{i}a Ignacia Pinto, Mario Rivera and Roberto Schurch; Chilean teacher Yorka \'{A}lamos; data collection manager Magdalena S\'{a}nchez and the data collection team at FOCUS; and the Aptus Chile CEO, Rodrigo L\'{o}pez. For comments we are grateful to seminar participants at various institutions and conferences; and to Nikhil Agarwal, Peter Arcidiacono, Orazio Attanasio, Jere Behrman, Teodora Boneva, Antonio Cabrales, Michela Carlana, Sara Chiuri, Martin Cripps, Nicolas Grau, Brent Hickman, Terri Kneeland, Elena Mattana, Arnaud Maurel, Nirav Mehta, Richard Murphy, Christopher Neilson, Claudia Neri, Abhijeet Singh, Petra Todd and Ken Wolpin. All errors are our own. The pre-analysis plan is in the AEA RCT Registry (AEARCTR-0002288). The research received ethics and data protection approval at UCL (10515/002 and Z6364106/2017/06/101). The views expressed in this
+paper are the views of the authors and do not involve the responsibility of the Bank of Italy. We gratefully acknowledge the following funding resources: Michela Tincani: ESRC (Grant ES/N015622/1), ERC (ERC-2015-CoG-682349) and ESRC Centre for the Microeconomic Analysis of Public Policy (ES/T014334/1); Fabian Kosse and Michela Tincani: Jacobs Foundation (Young Scholar Scheme); Fabian Kosse: German Research Foundation through CRC TR 190 and CRC TR 224. Corresponding author: m.tincani@ucl.ac.uk. The second and third author names are in alphabetical order. } \\
+}
+
+\author[1]{ Michela M. Tincani}
+\author[2]{ Fabian Kosse}
+\author[3]{ Enrico Miglino}
+
+\affil[1]{\small University College London, IFS, CEPR, \& LEAP}
+\affil[2]{\small University of Würzburg, IZA \& CESifo}
+\affil[3]{\small Bank of Italy}
+
+%\date{\today}
+\date{\parbox{\linewidth}{\centering%
+		\today\endgraf%\footnotesize
+		%\textcolor{red}{Please do not post online or circulate.} }}
+}}
+\begin{document}
+	\pagenumbering{gobble}
+	\maketitle
+	\newpage
+	\begin{singlespacing}
+		\begin{abstract}
+			\vskip-2pt	
+			\input{Revision/abstract.tex}
+		\end{abstract}
+	\end{singlespacing}
+	
+	    
+	
+	\onehalfspacing
+	%	\begin{onehalfspacing}
+	\newpage
+	\pagenumbering{arabic}
+
+   
+	\input{Revision/intro.tex}
+	\input{Revision/context_randomization.tex}
+	\input{Revision/data.tex}
+	\input{Revision/descriptive_stats.tex}
+	\input{Revision/policy_impacts.tex}
+	\input{Revision/mechanisms.tex}
+	\input{Revision/structural_model.tex}
+	\input{Revision/model_results_2.tex}
+   \input{Revision/conclusions_v2.tex}
+
+
+	
+
+\begin{onehalfspacing}
+    
+
+
+\renewcommand{\thetable}{R\arabic{table}}
+\renewcommand{\thefigure}{R\arabic{figure}}
+\newpage 
+\setcounter{footnote}{0} 
+\pagenumbering{arabic}
+\setcounter{table}{0}
+
+
+
+
+	
+	\setlength{\bibhang}{0.75cm}
+	\setlength{\bibsep}{0.035cm}
+	\begin{singlespacing}
+		\bibliography{Revision/references}
+	\end{singlespacing}
+	
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{A\arabic{table}}
+	
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{A\arabic{figure}}
+	
+	\clearpage
+	\pagenumbering{arabic}% resets `page` counter to 1
+	\renewcommand*{\thepage}{A\arabic{page}}
+
+	    
+
+
+	\begin{appendix}		
+		\newpage
+		
+		
+	
+		
+		%%%%%%%%%%%%
+		
+		\section*{\hspace{5cm}Online Appendix}
+		\begin{center}
+			\vspace{.7cm}
+			
+		
+   {\Large {Beliefs and the Incentive Effects of Preferential Admissions: Evidence from an Experiment and a Structural Model}} \\[0.5cm]
+			
+			{\large Michela M. Tincani, Fabian Kosse, and Enrico Miglino}
+			
+			\vspace{0.5cm}
+			\date{\today}
+		\end{center}
+		
+		\vspace{1cm}
+		
+		
+		\hrule
+		
+		\vspace{1cm}
+		
+		
+	
+	\input{Revision/appendix_fieldwork.tex}
+	\input{Revision/appendix_figures.tex}
+    \input{Revision/appendix_tables.tex}	
+    \input{Revision/appendix_robustness.tex}
+  
+    \newpage
+    \section{Additional Details on Analysis of Mechanisms}\label{sec:additionalmec}
+    	\setcounter{table}{0}
+	\renewcommand{\thetable}{E\arabic{table}}
+	
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{E\arabic{figure}}
+    \input{Revision/appendix_other_mechanisms}
+
+
+       
+
+		\newpage
+  
+
+
+ \input{Revision/appendix_application_lists_v2}
+
+
+ 
+ 
+		\section{Technical Appendix}
+        	\setcounter{table}{0}
+	\renewcommand{\thetable}{G\arabic{table}}
+	
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{G\arabic{figure}}
+
+        \input{Revision/appendix_PISA}
+
+        \input{Revision/appendix_estimate_PSUbGPAb}
+        \input{Revision/appendix_imputations}
+     
+        
+        \input{Revision/appendix_estimation_within}
+        \input{Revision/appendix_moment_list}
+
+     
+
+		\input{Revision/appendix_BNE}
+
+        \input{Revision/appendix_model_results.tex}
+      
+		
+		
+	\end{appendix}
+
+\end{onehalfspacing}
+	
+\end{document}

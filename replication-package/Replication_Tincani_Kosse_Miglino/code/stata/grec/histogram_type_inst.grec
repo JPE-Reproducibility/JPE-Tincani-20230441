@@ -1,0 +1,22 @@
+StataFileTM:00001:01100:GREC:                          :
+00008:00008:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 23 Jan 2024
+*! time: 12:16:21
+*! graph_scheme: cleanplots
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.xaxis1.style.editstyle majorstyle(use_labels(yes)) editcopy
+.xaxis1.style.editstyle majorstyle(alternate(no)) editcopy
+// xaxis1 edits
+
+.xaxis1.reset_rule 4 6 1 , tickset(major) ruletype(range) 
+// xaxis1 edits
+
+
+// <end>

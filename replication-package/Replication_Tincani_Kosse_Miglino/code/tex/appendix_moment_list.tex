@@ -1,0 +1,153 @@
+\subsection{Additional Details on Identification and Estimation}\label{sec:momident}
+
+\subsubsection{Identification and estimation of perceived production functions}\label{sec:PSUbGPAb}
+
+We estimate perceived production functions outside of the model, exploiting survey measures of study effort, of perceived returns to study effort in producing GPA and the PSU score, and of the expected GPA and PSU score at the effort students exerted.\par 
+
+
+
+\paragraph{Perceived GPA production.} Students form beliefs about their GPA in the last two high school years:
+
+\begin{eqnarray}
+\label{eq:GPAb}
+GPA^{(11-12,b)}_{i}&=&\overline{GPA}^{(11-12,b)}_{i}+\epsilon_{i}^{Gb}\\ \nonumber   &=& \beta^{Gb}_{0}+\beta^{Gb}_{1i}e_i+\beta^{Gb}_{2}\mbox{GPA}_{i,t-1}+\beta^{Gb}_{3} \mbox{simce}_{i,t-1}+\epsilon_{i}^{Gb} \quad \epsilon_{i}^{Gb} \sim N(0,\sigma^2_{GPA^b}).
+\end{eqnarray} 
+
+\noindent Recall that we obtain $\beta^{Gb}_{1i}$ from the survey data, as explained in section \ref{sec:measurements}. Consistent with the note to Table \ref{tab:beliefelicitation}, $\beta^{Gb}_{1i}$ captures the perceived effect of an additional hour of study per week during a given period on GPA in that same period--the object entering the production function in equation \ref{eq:GPAb}. Letting an $o$ superscript indicate the observed effort measure, we have that: $e_i^o=e_i+\epsilon_i^{mee}$, where $\epsilon_i^{mee}\sim N(0,\sigma^2_{mee})$ is a measurement error shock that is independently distributed from all model shocks, true effort, and initial conditions. As a function of observed effort, $e_i^o$, this production function is:
+
+\begin{eqnarray*}
+GPA^{(11-12,b)}_{i}&=&\overline{GPA}^{(11-12,b)}_{i}+\epsilon_{i}^{Gb}\\ \nonumber  
+&=& \beta^{Gb}_{0}+\beta^{Gb}_{1i}(e^o_i-\epsilon_i^{mee})+\beta^{Gb}_{2}\mbox{GPA}_{i,t-1}+\beta^{Gb}_{3} \mbox{simce}_{i,t-1}+\epsilon_{i}^{Gb}  \\ \nonumber 
+&=& \beta^{Gb}_{0}+\beta^{Gb}_{1i}e^o_i+\beta^{Gb}_{2}\mbox{GPA}_{i,t-1}+\beta^{Gb}_{3} \mbox{simce}_{i,t-1}+(\epsilon_{i}^{Gb}-\beta^{Gb}_{1i}\epsilon_i^{mee}).
+\end{eqnarray*} 
+
+\noindent Subtracting the measured impact of effort, $\beta^{Gb}_{1i}e_i^{o}$, from both sides of the equation, we obtain:
+
+\begin{eqnarray}\label{eq:GPAbnet}
+GPA^{(11-12,b)}_{i}-\beta^{Gb}_{1i}e_i^{o}&=&\overline{GPA}^{(11-12,b)}_{i}-\beta^{Gb}_{1i}e_i^{o}+\epsilon_{i}^{Gb}\\ \nonumber  
+&=& \beta^{Gb}_{0}+\beta^{Gb}_{2}\mbox{GPA}_{i,t-1}+\beta^{Gb}_{3} \mbox{simce}_{i,t-1}+(\epsilon_{i}^{Gb}-\beta^{Gb}_{1i}\epsilon_i^{mee}).
+\end{eqnarray} 
+
+
+\noindent Setting the two right-hand expressions from the equations in \eqref{eq:GPAbnet} equal to each other and denoting $\overline{GPA}^{(11-12,b)}_{i}-\beta^{Gb}_{1i}e_i^{o}$ by $GPA_i^{b,net}$, we obtain:
+
+\begin{equation}\label{eq:GPAboutside}
+   GPA_i^{b,net}= \beta^{Gb}_{0}+\beta^{Gb}_{2}\mbox{GPA}_{i,t-1}+\beta^{Gb}_{3} \mbox{simce}_{i,t-1}+\nu_i^{Gb},
+\end{equation}
+
+\noindent where $\nu_i^{Gb}=-\beta^{Gb}_{1i}\epsilon_i^{mee}$. The left-hand side of equation \eqref{eq:GPAboutside} is data. In particular, we obtain the belief over GPA in the last two high school years through a combination of survey and administrative data. In the survey we elicited the expected GPA over the four high school years, $\overline{GPA}^{(9-12,b)}_{i}$. Since students already knew their GPA in years 9 and 10 when answering the survey, we obtain the belief over the GPA in the last two high school years as: $\overline{GPA}^{(11-12,b)}_{i}=2 \left( \overline{GPA}^{(9-12,b)}_{i}-\frac{1}{2}\overline{GPA}^{(9-10)}_{i} \right)$, assuming that the belief over the GPA in the first two years is correct. This assumption is realistic as students hold accurate beliefs even about their future GPA (section \ref{sec:beliefs}). Under the assumption that the measurement error shock is mean zero and orthogonal to all initial conditions, the conditional expectation $E[\nu_i^{Gb}|\mbox{simce}_{i,t-1},GPA_{i,t-1},\beta^{Gb}_{1i}]$ equals zero. Therefore, OLS estimation of equation \eqref{eq:GPAboutside} gives consistent estimates of $\beta^{Gb}_{0},\beta^{Gb}_{2}$ and $\beta^{Gb}_{3}$.
+
+
+
+
+\paragraph{Perceived PSU production.} We report below the perceived production function of the PSU entrance exam score from equation \eqref{eq:PSUb} :
+\begin{eqnarray*} PSU^b_{i}&=&\overline{PSU}^b_{i}+\epsilon_{i}^{Pb}\\ \nonumber   &=& \beta^{Pb}_0+\beta^{Pb}_{1i}e_i {\bf 1}(e_i< e^{Pb}_{kink,i})+\beta^{Pb}_{2i}e_i {\bf 1}(e_i\geq  e^{Pb}_{kink,i}) \\ \nonumber 
+&& +\beta^{Pb}_{3}\mbox{GPA}_{i,t-1} +\beta^{Pb}_{4}\mbox{simce}_{i,t-1}+\epsilon_{i}^{Pb} \quad \epsilon_{i}^{Pb} \sim N(0,\sigma^2_{PSU^b}).
+\end{eqnarray*} 
+
+ 
+
+
+Recall that we obtain $\beta^{Pb}_{1i}$ and $\beta^{Pb}_{2i}$ from the survey data, as explained in section \ref{sec:measurements}. For each student, we determine whether the perceived marginal return at the effort actually exerted is $\beta^{Pb}_{1i}$ or $\beta^{Pb}_{2i}$, denoting this value as $\beta_{actual,i}^{Pb}$. Since exerted effort is measured with error, we cannot directly verify whether it exceeds the kink point. Instead, for students with a subjective expectation of the PSU ($\overline{PSU}_i^b$) equal to or larger than 450 we assume their effort is above the kink and the marginal return is $\beta_{2i}^{Pb}$. For students with a subjective expectation of the PSU below 450 we assume their effort is below the kink and their marginal return is $\beta_{1i}^{Pb}$.\footnote{For this assumption to be true, it is sufficient that the belief shock realization is the same for hypothetical and actual perceived PSU levels and that students interpret the hypothetical PSU levels in the survey questions used to construct the returns (reported in the last row of Table \ref{tab:beliefelicitation}) as expected values, i.e., net of the realization of the belief uncertainty shock $\epsilon_{i}^{Pb}$.}\par 
+
+
+
+
+
+
+
+
+    
+\noindent As a function of $\beta_{actual,i}^{Pb}$, the production function of $PSU_i^b$ then is:
+
+\begin{eqnarray*}
+PSU_i^b&=&\overline{PSU}_i^b+\epsilon_i^{Pb} \\ \nonumber
+&=&\beta_0^{Pb}+\beta_{actual,i}^{Pb}e_i+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+\epsilon_{i}^{Pb}
+\end{eqnarray*}
+
+
+From the survey, we obtain a noisy measure of the effort a student actually exerted. As a function of observed effort, the production function of $PSU_i^b$ is:
+
+\begin{eqnarray}\label{eq:PSUbobs}
+PSU_i^b&=&\overline{PSU}_i^b+\epsilon_i^{Pb} \\ \nonumber
+&=&\beta_0^{Pb}+\beta_{actual,i}^{Pb}(e^o_i-\epsilon_i^{mee})+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+\epsilon_{i}^{Pb}\\ \nonumber 
+&=& \beta_0^{Pb}+\beta_{actual,i}^{Pb}e^o_i+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+(\epsilon_i^{Pb}-\beta^{Pb}_{actual,i}\epsilon_i^{mee}).
+\end{eqnarray}
+
+
+\noindent Subtracting the measured impact of effort, $\beta_{actual,i}^{Pb}e_i^{o}$, from both sides of the equation, we obtain:
+
+\begin{eqnarray}\label{eq:PSUbnet}
+PSU_i^b-\beta_{actual,i}^{Pb}e_i^{o}&=&\overline{PSU}_i^b-\beta_{actual,i}^{Pb}e_i^{o}+\epsilon_i^{Pb} \\ \nonumber
+&=&\beta_0^{Pb}+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+(\epsilon_{i}^{Pb}-\beta^{Pb}_{actual,i}\epsilon_i^{mee}).
+\end{eqnarray}
+
+\noindent Finally, setting the two right-hand expressions from the equations in \eqref{eq:PSUbnet} equal to each other, we obtain:
+\begin{equation*}
+    \overline{PSU}_i^b-\beta_{actual,i}^{Pb}e_i^{o}+\epsilon_i^{Pb}=  \beta_0^{Pb}+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+\epsilon_{i}^{Pb}-\beta^{Pb}_{actual,i}\epsilon_i^{mee}, 
+\end{equation*}
+
+\noindent and therefore, denoting $\overline{PSU}_i^b-\beta_{actual,i}^{Pb}e_i^{o}$ by $PSU_i^{b,net}$, we have that:
+\begin{equation}\label{eq:PSUboutside}
+    PSU_i^{b,net}=  \beta_0^{Pb}+\beta_3^{Pb}\mbox{GPA}_{i,t-1}+\beta_4^{Pb}\mbox{simce}_{i,t-1}+\nu_i^{Pb}, 
+\end{equation}
+
+\noindent where $\nu_i^{Pb}=-\beta^{Pb}_{actual,i}\epsilon_i^{mee}$. The left-hand side of equation \eqref{eq:PSUboutside} is data. Under the assumption that  the measurement error shock is mean zero and orthogonal to all initial conditions, the conditional expectation $E[\nu_i^{Pb}|\mbox{simce}_{i,t-1},GPA_{i,t-1},\beta^{Pb}_{actual,i} ]$ equals zero. Therefore, OLS estimation of equation \eqref{eq:PSUboutside} gives consistent estimates of $\beta_0^{Pb},\beta_3^{Pb}$ and $\beta_4^{Pb}$.\\
+
+
+
+\paragraph{Estimates and goodness of fit.}  Table \ref{tab:outsidePSUbGPAb} reports the estimates of $\beta_0^{Pb},\beta_3^{Pb},\beta_4^{Pb},\beta^{Gb}_{0},\beta^{Gb}_{2}$ and $\beta^{Gb}_{3}$. To evaluate the goodness of fit,  we compare the predicted perceived achievement scores at the reported effort levels to the actual perceived achievement scores reported in the survey. Specifically, we construct the predicted perceived PSU and GPA as follows:
+
+\begin{equation}\label{eq:predPSUb}
+\widehat{\overline{PSU}^b_i}=\hat{\beta}_0^{Pb}+\beta_{actual,i}^{Pb}e^o_i+\hat{\beta}_3^{Pb}\mbox{GPA}_{i,t-1}+\hat{\beta}_4^{Pb}\mbox{simce}_{i,t-1}
+\end{equation}
+
+\begin{equation}\label{eq:predGPAb}
+\widehat{\overline{GPA}}^{(11-12,b)}_{i}=\hat{\beta}^{Gb}_{0}+\beta^{Gb}_{1i}e^o_i+\hat{\beta}^{Gb}_{2}\mbox{GPA}_{i,t-1}+\hat{\beta}^{Gb}_{3} \mbox{simce}_{i,t-1}.
+\end{equation}
+
+
+\input{Revision/Tables R/params_outside_model_PSUbGPAb}
+
+Figure \ref{fig:GPAbPSUbfit} shows how the predicted perceived outcomes ($\widehat{\overline{PSU}^b_i},\widehat{\overline{GPA}}^{(11-12,b)}_{i}$) compare to the perceived outcomes reported in the survey ($\overline{PSU}^b_i,\overline{GPA}^{(11-12,b)}_{i}$). To mitigate the influence of measurement error in effort (which affects $e_i^o$ in equations \eqref{eq:predPSUb} and \eqref{eq:predGPAb}) on the predicted outcomes, we average both predicted and actual outcomes conditional on the SIMCE test score and GPA from grades 9 and 10. Averaging across students helps isolate the model's goodness of fit from noise due to measurement error. As seen in the figure, the fit is excellent in regions with non-negligible student density.
+
+
+
+ \begin{figure}[H]
+	\centering
+
+	\centering %[width=\linewidth]
+	\includegraphics[scale=0.25]{Revision/Figures R/PSUbGPAb_belief_GoF_nolasso.png}
+	\caption{\label{fig:GPAbPSUbfit} \scriptsize Goodness of fit of perceived PSU and GPA production functions at exerted effort levels. This figure shows the fit of the perceived production functions for PSU and GPA from equations \eqref{eq:PSUb} and  \eqref{eq:GPAb}. Predicted outcomes are constructed as in equations \eqref{eq:predPSUb} and \eqref{eq:predGPAb}. Actual outcomes are obtained from the survey.  }
+\end{figure}
+
+
+
+
+
+\subsubsection{Identification of remaining parameters estimated through Indirect Inference}\label{sec:remaining_II_param}
+\paragraph{Perceived admission likelihoods.} 
+The perceived probability of regular admission, given in equation \eqref{eq:pr_Rb}, is a function of perceived PSU and enters the decision to take the entrance exam. Its parameters are identified by matching the constant and slope from an auxiliary regression of exam participation on perceived PSU among control group students, for whom exam-taking is not influenced by preferential admissions. In the treatment group, the perceived probability of PACE admission, specified in equation \eqref{eq:pr_Pb}, depends on the perceived distance from the cutoff and affects effort choice. We identify its parameters by matching the overall treatment effect on effort and the interaction coefficient between treatment status and perceived cutoff distance.\par 
+These parameters cannot be estimated via Probit models of admissions without solving the model, because they govern students' beliefs about the likelihood of admission rather than the objective admission likelihood itself. Instead, we estimate them by finding the parameter values that allow the model to match observed choices made under those beliefs.  \par
+
+\paragraph{Effort cost and effort measurement error.} The coefficient on effort squared, $\xi_{2}$, is identified from the slope of study hours with respect to the baseline SIMCE test score. In the model, the marginal return to effort in the continuation value at time 1 depends on SIMCE (via the perceived admission functions); hence, students with different SIMCE optimally choose different efforts. The flow utility of effort, however, is not a function of SIMCE. Given separate identification of the continuation-value parameters (from admission processes estimated outside of the model and college-enrollment moments discussed below), how study hours vary with SIMCE isolates how the marginal flow utility of effort varies with effort, which helps identify the curvature parameter $\xi_2$. Any remaining unconditional effort variance in the treatment group helps identify the measurement error on effort.\par 
+
+
+
+\paragraph{Shocks.} The variances of the GPA and PSU shocks are identified from the dispersion in GPA and PSU scores among control group students.\par 
+
+
+
+
+\paragraph{Entrance-exam taking.} The parameters $c_0^S$ and $c_1^S$ in equation \eqref{eq:ut_PSU} are identified from the fraction of control group students who take the entrance exam and the null treatment effect on exam participation. Since PACE increases the option value of taking the exam, the null effect identifies the offsetting increase in perceived cost (or, equivalently, reduction in perceived benefit) captured by $c_1^S$.\par 
+
+
+\paragraph{Enrollment preferences.} The coefficient on $pgrad_i^b$ in equation (\ref{eq:Enrollmentut}), $\lambda_0^G$, is pinned down by the coefficient in a regression of enrollment on $pgrad_i$ among admitted students in the control group. The additional (dis)utility from preferential enrollment, $\delta$, is pinned down by the fraction choosing preferential enrollment among those admitted through both channels. \par
+
+
+
+
+
+
+
+\input{Revision/auxiliary_parameters.tex}

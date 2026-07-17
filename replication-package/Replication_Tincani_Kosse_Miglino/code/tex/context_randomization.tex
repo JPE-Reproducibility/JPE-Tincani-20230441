@@ -1,0 +1,43 @@
+\section{Context, Randomization and Data}\label{sec:background}
+
+\subsection{Context and PACE Policy}\label{sec:regular}
+\vspace{-5pt}
+In this section we describe the context and policy as they were for our sample.
+\vspace{-5pt}
+\paragraph{Higher education in Chile.} There are three categories of higher education institutions in Chile. Selective colleges are those that participate in the nationwide centralized admission system called {\itshape Sistema \'{U}nico de Admisi\'{o}n} (SUA, \cite{mineduc_sua_universities}). They offer five-year (and longer) programs of an academic nature. They include the 27 public and private not-for-profit colleges that are part of the Council of Rectors of Chilean Universities (CRUCH) and 12 additional private colleges \citep{mineduc_sua_universities}. Off-platform colleges offer academic programs and do not participate in the centralized admission system.\footnote{See \citealp{kapor2024aftermarket} for a description of these off-platform options.}  Finally, professional institutes and technical training centers do not have minimum admission requirements and provide vocational and shorter degrees. In 2018, the shares of tertiary enrollments were 41\% for selective colleges, 10\% for off-platform colleges, and 49\% for vocational institutes.\par
+\vspace{-5pt}
+\paragraph{Regular channel admissions.} Students wishing to go to a selective college must take the PSU ({\itshape Prueba de Selecci\'{o}n Universitaria}) standardized college admission exam. After observing their scores, they decide whether to submit an application to the SUA system. Higher scores increase the likelihood of admission. The seat allocation follows a deferred acceptance algorithm where the PSU score is the most important component of programs' rankings of students \citep{demre2018proceso,rios2021improving,kapor2024aftermarket}. \par 
+
+
+
+
+\vspace{-10pt}
+\paragraph{PACE.} In line with global statistics, college enrollment in Chile is unequal across socioeconomic lines. Students from families in the top income quintile are over three times more likely to enroll than students from families in the bottom income quintile (Figure \ref{fig:enrollment_gradient}). PACE was introduced to increase selective college admissions among disadvantaged students. The government selected the schools to be targeted by PACE using a school-level vulnerability index ({\itshape Indice de Vulnerabilidad Escolar}) based on students' socioeconomic characteristics, to identify schools serving underprivileged students.\par 
+Students in high schools participating in PACE can apply to a selective college through the regular channel, like any other student. Moreover, they are guaranteed admission to a selective college, in the year immediately after graduating from high school, if they satisfy three conditions. First, the grade point average in grades 9 to 12 must be in the top 15$\%$ of the high school cohort.\footnote{\label{foot:corr_PNR_GPA}The central testing authority computes the score used to rank students, called {\itshape Puntaje Ranking de Notas} (PRN), by adjusting the raw four-year grade point average to account for the school context. The Pearson's correlation coefficient between the unadjusted four-year grade point average and the PRN is 97.77$\%$. Details of how the score is calculated can be found in Appendix \ref{sec:ptjeranking}.} Second, like in the Texas and California percent plans (\citealp{civil_rights_2003}), the student must take the entrance exam, even though the score does not affect the likelihood of obtaining a PACE admission. When students decide whether to take the exam, they have not yet been told whether they have graduated in the top $15\%$ of their school. Third, the student must attend the PACE high school continuously for the last two high school years, and participate in light-touch orientation classes (two hours per month on average) that are offered to all students in PACE high schools.\footnote{The Texas Top Ten percent plan also offers orientation classes. The PACE orientation classes cover the college application process and study techniques and often replace orientation classes already offered by the schools (\citealp{mineduc_2018}). }\par 
+
+
+
+Other features of PACE include the following. i) Unlike the percent plans in Texas and California (\citealp{horn_2105}), there are no coursework requirements in addition to graduating in the top $15\%$. ii) Optional tutoring sessions in college are available to those who enroll via PACE. iii) PACE college seats are supernumerary: they do not replace regular seats but are offered in addition to them. Therefore, PACE did not make it mechanically harder to obtain regular admission. iv) Of the 39 institutions participating in the centralized admission system, 29 signed an agreement with the government to offer PACE seats. The distribution of study fields is broadly similar across PACE and regular seats, but PACE seats are relatively more likely to be  in the field of Education and less likely to be in the Social Sciences and Health (Figure \ref{fig:pace_vs_regular_majors}). PACE seats are of similar quality to regular seats, as measured by the average entrance exam score of regular entrants in each program, although the most selective seats are under-represented (Figure \ref{fig:pace_vs_regular}). PACE seats are less likely than regular seats to be in the same province as students' high schools (0.50 vs. 0.60), but more likely to be in the same region (0.85 vs. 0.80), as shown in Table \ref{tab:summarygeogregularpace}. v) The allocation process for PACE seats, described in detail in Appendix \ref{sec:PACEadmissionprocess}, is separate from the regular admission process, such that a student can obtain both a PACE and a regular admission. If a student does not accept a PACE admission, that PACE seat remains vacant. vi) Nearly all students in PACE schools qualify for a full tuition waiver ({\itshape Gratuidad}) due to their low socioeconomic status. 
+
+
+
+\subsection{Randomization and Balancing Tests}\label{sec:pol_random}
+
+\paragraph{Randomization.} The government introduced the PACE program in 69 disadvantaged high schools in 2014 and later expanded it to more schools. In 2015, it identified 221 high schools that were not yet PACE schools, but that met the eligibility criteria for entering PACE in 2016, per students' socioeconomic status. Using a randomization code written by PNUD Chile (United Nations Development Program), it randomly selected 64 of the 221 eligible schools to receive the PACE treatment. The randomization was unstratified.\par
+
+
+
+
+When a school first enters PACE, only the cohort of eleventh graders is entered into the program. The randomized expansion concerned the cohort who started eleventh grade in March 2016. Before starting the school year, students who were enrolled in schools randomly selected to be treated were informed their school was in the PACE program. This announcement was made after the school enrollment deadline; thus, we did not observe strategic selection into high schools (Appendix \ref{sec:lackofstrat}). The control schools were not entered into the PACE program; they were not promised participation. Figure \ref{application_timeline} illustrates the timeline. Grades in the first two high school years (9 and 10) were already determined when students in treated schools were informed they were in a PACE school. But students who wished to affect their four-year GPA average had two school years to do so.
+
+\vspace{-10pt}
+\paragraph{Sample and balancing tests.} We collected data on the experimental cohort \citep{mineduc_experimental_high_school_lists}. We sampled all the 64 schools randomly allocated to treatment. For budget reasons, we randomly selected 64 of the 157 schools randomly allocated to control. Table \ref{tab:balancing} presents the balancing tests for the 128 sampled schools using background information collected when the cohort was in the tenth grade. The students in treated and control schools did not differ significantly at baseline on gender, age, socioeconomic status (SES), academic performance or type of high school track attended (academic or vocational).
+
+
+
+\input{Revision/Tables R/sample_balance}
+
+
+
+
+

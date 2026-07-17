@@ -1,0 +1,22 @@
+\subsection{PISA score re-scaling}\label{sec:PISA}
+
+Figure \ref{fig:comparison_simce} plots the histogram of tenth grade SIMCE test scores, and draws a line corresponding to the OECD mean for reference (at 0.49). Since the SIMCE tests are administered only nationally, we draw on data from PISA in Chile and in OECD countries to predict the SIMCE mean in OECD countries. This is the reasoning and procedure we follow: 
+
+
+\begin{itemize}
+    \item In 2015 the mean PISA scores of Chile were 447 in Science, 459 in Reading, 423 in Math.
+    \item In 2015 the mean PISA scores of OECD were 493 in Science, 493 in Reading, 490 in Math.
+    \item There is theoretically no minimum or maximum score in PISA; rather, the results are scaled to fit approximately normal distributions, with means around 500 score points and
+standard deviations around 100 score points.
+\item Therefore, OECD countries had a:
+\begin{itemize}
+    \item mean Science score of $\frac{493-447}{100}=0.46$ standard deviations above the Chilean one;
+    \item mean Reading score of $\frac{493-459}{100}=0.34$ standard deviations above the Chilean one;
+    \item mean Mathematics score of $\frac{490-423}{100}=0.67$ standard deviations above the Chilean one;
+    
+\end{itemize}
+\item On average, OECD countries had mean PISA scores that were higher than the Chilean mean PISA score by $(0.46+0.34+0.67)/3=0.49$ standard deviations.
+\item Sources: \href{https://www.oecd.org/pisa/pisa-2015-results-in-focus.pdf}{Link 1},  \href{https://www.oecd-ilibrary.org/docserver/35665b60-en.pdf?expires=1680550798&id=id&accname=ocid195693&checksum=113A5313C82B038E32AA28364279166D}{Link 2}
+\end{itemize}
+
+

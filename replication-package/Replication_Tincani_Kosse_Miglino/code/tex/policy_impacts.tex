@@ -1,0 +1,48 @@
+
+\section{Experimental Policy Evaluation}\label{sec: findings}
+
+To identify the policy impacts, we exploit the randomized assignment of schools to PACE, and estimate the following linear regression model:
+\begin{equation}\label{eq:main_OLS}
+	Y_{is}=\alpha+ \beta T_s + \lambda X_{i}+\eta_{is},
+\end{equation}
+
+\noindent where $Y_{is}$ is the outcome of student $i$ in school $s$, $T_s$ is the treatment status of school $s$, and $X_{i}$ is a vector of student $i$'s baseline characteristics.\footnote{We exclude from vector $X_i$ mother' and father's education and household income because of a high number of missing observations for these variables.} The parameter of interest is $\beta$. The standard errors are clustered at the school level.\par 
+
+
+\paragraph{Experimental Finding 1: PACE increased selective college admissions and enrollments.} Figure \ref{fig:TEovertime} shows that students in schools randomly assigned to the treatment are $4.1$ percentage points (p.p.) more likely to be admitted to selective college and $3.0$ p.p more likely to enroll than students in control schools, corresponding to a $36\%$ and $35\%$ increase compared to selective college admissions and enrollments in the control group. The effect on continuous enrollment in the fifth year or graduation by such time (which is an upper bound for the effect on on-time graduation) is 1.5 p.p., corresponding to a $30 \%$ increase compared to the control group, and it is significantly different (p=0.006) from the treatment effect on first-year enrollments. The smaller treatment effect in relative terms is consistent with lower persistence rates among college entrants from treated schools (56.7\% , compared to 58.8\% in the control group).\par 
+
+These impacts are concentrated among students who, at baseline, were in the top $15\%$ of their school according to GPA in grades 9 and 10, as shown in Tables \ref{tab: TEapplicationsadmissions} and \ref{tab: TEenrolledovertimetop15}. Among top-performing students, PACE increased selective college applications, admissions, and first-year enrollments in selective colleges. Although selective college enrollment effects remained significant and positive five years after high school, they were smaller and significantly different (p = 0.000) from first-year effects: first-year enrollments increased by 16.6 p.p., 65\% relative to the control group mean, while fifth-year enrollments showed an 8.7 p.p., or 52\%, increase (Table \ref{tab: TEenrolledovertimetop15}). These results are consistent with larger persistence rates among college entrants from control schools, who persisted at a 65.4\% rate, compared to a 61.4\% rate among college entrants from treated schools. Back-of-the-envelope calculations suggest that if persistence rates had been the same across groups, the fifth-year enrollment effect would have been approximately 10.9 p.p., nearly 25\% larger than the observed effect.\footnote{Even with identical persistence rates for control and treated students, the positive treatment effect on enrollment declines over time in absolute terms. Since the treatment group starts with more enrollees, a constant persistence rate results in more dropouts in absolute terms, gradually reducing the enrollment gap between the two groups.} Table \ref{tab: TEenrolledovertimetop15} also shows that PACE lowered the enrollment of top-performing students in the outside options (vocational institutes and non-selective colleges). And while it increased their first-year enrollments in higher education overall, it had no significant impacts on continuous enrollment in or graduation from higher education after five years.\footnote{The regression results are robust to excluding the control variables, as can be seen by comparing average outcomes across treatment groups in Table \ref{tab:summaryoutcomesbeliefsTC}.}\par 
+
+
+
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.70\linewidth]{Revision/Figures R/TE_over_time_enrolled_SUA_in_experimental_schools.png}
+	\vspace{-0.5cm}
+	\caption{\label{fig:TEovertime} Effects of PACE on admissions and on enrollment or graduation over time. The Figure reports OLS estimates from the estimation of parameter $\beta$ in equation \eqref{eq:main_OLS}. The controls are: gender, age, indicator for very-low-SES student, baseline SIMCE test score, never failed a grade, and high school track (academic or vocational). The standard errors clustered at school level are reported in parenthesis, and the $95\%$ confidence intervals constructed from them are shown. The enrollment variables capture continuous enrollment in or graduation from a selective college: the outcome variable in the $t^{th}$ year after high school is equal to one if the student enrolled in a selective college the first year and remained continuously enrolled in that selective college every year up until and including year $t$, or if he/she enrolled in a selective college the first year and graduated from it in a year prior to $t$ or in $t$. The variables are set to zero in all other cases, including having never enrolled in a selective college. Table \ref{tab: TEapplicationsadmissions} reports the estimates of the admission effect and Table \ref{tab: TEenrolledovertime} of the enrollment effects. } 
+	%\end{minipage}
+\end{figure}
+
+
+
+
+
+\vspace{-10pt}
+
+
+
+
+\paragraph{Experimental Finding 2: PACE lowered study effort and achievement before college.} Columns (1) and (2) of Table \ref{tabreducedform} present results on the outcomes specified in the pre-analysis plan. Students in treated schools perform $10\%$ of a standard deviation worse than students in control schools on the standardized achievement test we administered. Column (2) shows that the treatment had a negative average effect on study effort of $9\%$ of a standard deviation. The effect is driven by a reduction in study effort towards schoolwork inside and outside the classroom and in entrance exam preparation (Table \ref{tab:effortappendix}). Using additional administrative outcome data, columns (3) and (4) provide suggestive evidence that the policy had a negative effect on the grades in the subjects tested on the entrance exam (although this effect is insignificant when accounting for multiple hypothesis testing), and no effect on the grades in the subjects not tested. Together, the results suggest students reduced their study effort towards PSU exam preparation and PSU exam subjects, without reallocating effort to other subjects.\par 
+
+
+
+\input{Revision/Tables R/TE_pre_college_outcomes}
+
+
+As we show in Table \ref{tab: TEpsu}, PACE did not significantly change the proportion of students taking the entrance exam (column 1), but the sample taking the exam appears more positively selected in the treatment group (column 2). Consistent with the reduction in effort and pre-college achievement, this results in similar entrance exam scores across treatment groups (column 3).\par 
+
+
+Appendix \ref{sec:predvalsurvey} examines the validity and robustness of the survey-based findings, showing that the survey-based measures display good predictive validity on long-term outcomes, and that the results are robust to using item response theory to calculate the achievement score.
+
+

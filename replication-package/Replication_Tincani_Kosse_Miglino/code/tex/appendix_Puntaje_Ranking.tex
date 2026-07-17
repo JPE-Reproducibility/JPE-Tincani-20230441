@@ -1,0 +1,17 @@
+\subsection{Ministerial Formula to Calculate High School GPA}\label{sec:ptjeranking}
+
+The Ministry ranks students within each school according to an adjusted high school GPA score, called {\itshape Puntaje Ranking de Notas}, calculated using a specific formula. Here, we report an English translation of official information on the formula, which can be found at \url{https://demre.cl/paes/factores-seleccion/puntaje-ranking}. Although the adjusted formula calculates each student's relative position compared to prior cohorts, the final ranking determining the within-school top 15\% cutoff for PACE seats is computed exclusively among students within the same cohort and school.\par 
+
+
+
+First, each student's average grade in each high school year, $GPA_{ig}$, where $g=9,10,11,12$, is rescaled to range from 100 to 1000.\footnote{The Department of Educational Assessment, Measurement, and Registration (DEMRE) publishes tables to rescale GPA, see for example \url{https://demre.cl/proceso-admision/factores-seleccion/tabla-transformacion-nem-5-procesos-grupo-c.php}.} It is then transformed into a relative score, $R_{ig}$, broadly capturing where the student ranks compared to the three prior cohorts of students who completed the same grade in the same school in which the student attended that grade (called the ``reference population"). Letting $\overline{GPA}_g$ denote the average grade in the reference population, and $maxGPA_g$ the highest grade in the reference population, this grade-specific relative ranking is computed according to the following formula:
+
+$$R_{ig}=\overline{GPA}_g+(GPA_{ig}-\overline{GPA}_g)\frac{1000-GPA_{ig}}{maxGPA_g-\overline{GPA}_g}$$
+
+\noindent where $\overline{GPA}_g$ and $maxGPA_g$ are expressed on the same 100 to 1000 scale as $GPA_{ig}$. The final score is then obtained as the following average:
+
+$$adjGPA_{i}=\frac{R_{i1}+R_{i2}+R_{i3}+R_{i4}}{4}.$$
+
+\noindent In our sample, the Pearson correlation coefficient between $adjGPA_{i}$ and the average of raw GPA in the four high school years is $97.77\%$.\par 
+
+The top 15\% cutoff for PACE seats is determined by ranking students in the same school and cohort according to $adjGPA_i$. Within each school and cohort, the top 15\% cutoff is determined as the $85^{th}$ percentile of $adjGPA_i$.

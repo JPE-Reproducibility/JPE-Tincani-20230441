@@ -1,0 +1,140 @@
+\subsubsection{Auxiliary regressions and targeted moments for Indirect Inference }\label{sec:moments}
+
+The auxiliary regressions below generate moments that we target through indirect inference. The variables that shift latent type probabilities enter these moments in two ways. Gender and survey status enter selected auxiliary regressions as regressors, so their coefficients summarize heterogeneity in choices and outcomes associated with those variables. Baseline top-15 status is not used as a regressor; instead, we compute several moments separately in the full sample and in the baseline top-15 subsample, allowing heterogeneity by baseline rank to discipline the latent-type distribution. For each candidate structural parameter vector, we solve the model, simulate choices and outcomes, re-estimate the same auxiliary regressions and sample-split moments on the simulated data, and compare the simulated auxiliary moments to their empirical counterparts.\par
+We summarize below the classes of auxiliary regressions used in estimation and indicate which auxiliary regression parameters are targeted. We then list additional targeted moments. 
+
+\paragraph{Class 1: Treatment-effect regressions.}
+Letting $i$ denote a student and $s$ a school, we estimate 
+\begin{equation}
+Y_{is} = \alpha + \tau \,\text{T}_{is} + X_{is}'\gamma + u_{is},
+\end{equation}
+with common controls $X_{is}$ (model initial conditions, listed in Section \ref{sec:solution}), and where $T_{is}$ denotes the treatment status. The targeted parameter is the treatment coefficient $\tau$. We estimate this regression for $Y_{is} \in \{\text{admission}, \text{enrollment in year 1}, \text{enrollment in year 5}\}$ in both the full sample and the baseline top-15\% subsample, and for $Y_{is} \in \{\text{weekly study hours}, \text{entrance-exam taking}\}$ in the full sample only. Moreover, we estimate this regression for fifth-year enrollment in the subsample of students who enrolled in the first year and were in the top 15\% of their school at baseline.\par 
+In addition, we estimate a specification that allows the treatment effect on study effort to vary with students’ perceived distance from the top-15-percent cutoff. Specifically, we estimate
+\begin{equation}
+Y_{is} = \alpha + \tau \,\text{T}_{is} + \delta D_i + \kappa \,(\text{T}_{is} \times D_i)
+      + X_{is}'\gamma + (X_{is} \times D_i)'\eta + u_{is},
+\end{equation}
+where $Y_{is}$ is weekly study hours and $D_i$ is the perceived distance from the top-15-percent cutoff. The targeted auxiliary parameter is the interaction coefficient $\kappa$.
+
+
+
+
+\paragraph{Class 2: Descriptive regressions.}
+We estimate descriptive regressions of the form
+\begin{equation}
+Y_{is} = \alpha + X_{is}'\beta + \epsilon_{is},
+\end{equation}
+where $i$ denotes the student and $s$ the school. Outcomes $Y_{is}$, pre-determined regressors $X_{is}$, estimation samples, and targeted parameters are summarized in Table~\ref{tab:desc_regs}.
+
+\begin{table}[H] %ht
+\centering
+\caption{Targeted parameters from descriptive regressions}\label{tab:desc_regs}
+\begin{tabularx}{\textwidth}{l l X X}
+\toprule
+Outcome $Y_{is}$ & Sample & Pre-determined regressors $X_{is}$ & Coefficients targeted \\
+\midrule
+Entrance-exam taking & Full sample & Model initial conditions &
+Female, Missing survey \\
+Weekly study hours & Full sample & Model initial conditions &
+Female \\
+Weekly study hours & Full sample &  Simce &
+Simce \\
+
+First-year enrollment & Control group &
+Type-probability variables &
+Female, Missing survey, Constant \\
+
+Admissions & Control group &
+Female, Missing survey &
+Female, Missing survey \\
+
+Regular admission & Control group &
+GPA (9--10), Simce, Type vars &
+GPA (9--10), Simce \\
+
+GPA & Full sample &
+Type vars, Model initial conditions &
+Female, Missing survey \\
+
+Fifth-year enrollment & Full sample &
+Female, Missing survey, Simce &
+Female, Simce \\
+
+First-year enrollment & Admitted, control group &
+Perceived graduation likelihood &
+Perceived graduation likelihood \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+
+
+\paragraph{Class 3: Relationships between endogenous model outcomes.} Letting $Y^1_{is}$ and $Y^2_{is}$ denote two endogenous model outcomes, we estimate regressions of the form:
+\begin{equation}
+Y^1_{is} = \alpha + \beta Y^2_{is} + X_{is}'\gamma + \epsilon_{is},
+\end{equation}
+\noindent where $X_{is}$ denotes pre-determined regressors. Outcomes, samples, regressors, and targeted coefficients are summarized in Table~\ref{tab:endo_regs}. \par 
+
+
+\begin{table}[H]
+\centering
+\caption{Targeted parameters from regressions linking endogenous model outcomes}
+\label{tab:endo_regs}
+\begin{tabularx}{\textwidth}{l l X X X}
+\toprule
+Outcome $Y^1_{is}$
+& Sample
+& Endogenous regressor $Y^2_{is}$ 
+& Pre-determined regressors $X_{is}$ 
+& Coefficients targeted \\
+\midrule
+Entrance-exam taking
+& Control group
+& Expected PSU score
+& ---
+& Expected PSU score, constant \\
+
+12th-grade GPA
+& Full sample
+& Weekly study hours
+& Model initial conditions
+& Weekly study hours, baseline GPA, Simce \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+\paragraph{Moments.}
+In addition to the auxiliary regressions described above, we match a set of means and variances for key outcomes.
+
+We target average admission rates in the control group, both overall and among students in the top 15\% of their school at baseline. Analogously, we match the share of treated students receiving a PACE admission, overall and within the baseline top 15\% subgroup.\par
+
+We target average enrollment rates in the first and fifth years after high school for control-group students, overall and in the baseline top 15\%. In addition, we match first-year enrollment conditional on admission among top-15\% students, separately by treatment status. We further match the proportion of students admitted through both the regular and PACE channels who accept the PACE admission.\par
+
+Finally, for pre-admission outcomes, we match mean weekly study hours in the control group and among female students; the share taking the entrance exam in the control group and among male students with non-missing surveys; mean 12th-grade GPA in the control group; and persistence in top-15\% rank from baseline to endline, separately for control- and treatment-group students.\par 
+
+
+Finally, we target the variances of key outcomes: 12th-grade GPA and weekly study hours in the control group, and PSU scores among control-group exam takers.\par
+
+
+\subsubsection{Estimation algorithm for Indirect Inference}\label{sec:estimationwithin}
+In a first step, we estimate a set of auxiliary model parameters and of moments that summarize the experimental findings and data patterns to be targeted in the structural estimation. In a second step, an outer loop searches over the parameter space, while an inner loop solves the dynamic model at each candidate parameter value and forms the criterion function. The latter is the distance between the moments from the data and their counterparts from the simulated data.\par 
+At each parameter iteration $\theta$, we simulate $S$ datasets, where each simulation is a draw for the model shocks and student type. Following \citealp{eisenhauer2015estimation}, we set $S=20$. Let $\bar{\beta}$ denote the vector of auxiliary model parameters and moments computed from the data, and let $\hat{\beta}^s(\theta)$ denote the corresponding values obtained from the $s^{th}$ dataset predicted by the model at the value $\theta$ of the structural parameters. Let $\hat{\beta}(\theta)=\frac{1}{S} \sum_{s=1}^S \hat{\beta}^s(\theta)$.  The structural parameter estimator is obtained as the solution to:
+
+
+\begin{equation}\label{eq:GII}
+	\hat{\theta}=\argmin_{\theta} \big[\hat{\beta}(\theta)-\bar{\beta}\big]'W\big[\hat{\beta}(\theta)-\bar{\beta}\big]
+\end{equation}
+
+
+\noindent where $W$ is a positive definite weighting matrix. As in \cite{gayle2019optimal}, we use a matrix whose main diagonal elements are proportional to the inverse of the variances of the auxiliary parameters estimated from the data, and whose other elements are zero.\footnote{Specifically,  we increase the weights of the treatment effects on admissions, enrollment, persistence, study effort, and entrance-exam-taking.}\par 
+
+To find the minimum of the criterion function, we use a derivative-free optimization algorithm, the Improved Stochastic Ranking Evolution Strategy, which is suitable for nonlinearly-constrained global optimization \citep{runarsson2005search}.
+
+

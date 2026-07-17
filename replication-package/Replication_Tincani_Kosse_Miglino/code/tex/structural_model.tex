@@ -1,0 +1,288 @@
+\section{A Dynamic Model of Education Choices}\label{sec:structural_model}
+
+
+
+We develop a structural model of students' educational choices that rationalizes the experimental findings and allows us to go beyond them in three ways. It separates the causal effect of pre-college effort on college persistence from selection on unobserved characteristics, thereby addressing endogeneity concerns that arise when effort is a choice. It allows us to study how students' over-optimism shapes their behavior and determines how they respond to admission-based policies. And finally, it allows us to evaluate counterfactual PACE designs and information interventions that the experiment cannot directly assess.\par  
+
+
+
+
+
+
+To achieve this, the model incorporates several key features. First, it links pre-college choices to college outcomes. The reduced-form results in Section \ref{sec:reductions_college_preparedness} show that pre-college effort predicts persistence in selective college, but they do not show that increasing effort would cause persistence to rise: effort is itself a choice, and students who choose higher effort may differ in unobserved traits that also affect college success. By jointly modelling effort choices, selection into college, and persistence as functions of observed and unobserved heterogeneity, and by exploiting experimental variation in effort, the model separates the correlational and causal components of the effort-persistence relationship.\par\
+
+
+
+
+Second, the model does not impose rational expectations. Students make pre-college and enrollment decisions based on subjective beliefs about their academic skills, admission chances, and likelihood of persisting in college. These beliefs are identified using our original survey data, while data on actual academic skills, admissions, and persistence outcomes allow us to identify the objective underlying processes. \par 
+
+
+We use the estimated model to simulate the long-term educational effects of alternative admission policies and to illustrate how beliefs shape students’ responses to policy incentives and, ultimately, policy outcomes.\par 
+
+
+
+\subsection{Students}\label{sec:students}
+At the experiment's baseline, the end of $10^{th}$ grade, each student $i$ is characterized by observable demographics and achievement measures: age, gender, socioeconomic status ({\itshape Alumno Prioritario} classification, indicating very low SES), high school track (vocational or academic), treatment or control school status, Chilean region of residence, GPA and within-school GPA rank (based on $9^{th}$ and $10^{th}$ grade marks), and standardized test scores (SIMCE) in $10^{th}$ grade.\par 
+To allow for unobserved heterogeneity, students in the model are also characterized by a discrete permanent type, $k_i\in\{1,2,...,K\}$, known to them but not to the econometrician (\citealp{heckman1984method,keane1994solution,keane1997career}), with the number of types, $K$, known to the econometrician. We allow some model parameters to vary by type. In estimation, we specify the type probability as a function of baseline variables (including an indicator for whether survey data is missing, to allow for survey non-response based on unobservables) and estimate the parameters of this probability along with the model parameters.\par 
+
+\subsection{Model Description Period by Period}
+We model students' decisions from the start of $11^{th}$ grade to the college enrollment choice four months after high school completion. Students first form beliefs about their future admission scores (GPA and entrance exam score) and college persistence and how effort maps into them. They then choose study effort during the last two high school years and decide whether to take the entrance exam at high school graduation based on these beliefs, while admission scores and college admission follow objective stochastic processes. Students who took the exam and who receive an offer four months after high school graduation decide whether to enroll in college, basing their decision on their perceived college persistence. Conditional on enrollment, however, there is an exogenous objective probability of persisting. Given the short time horizon of these decisions, we impose no time discounting within the model.\footnote{If students did discount future payoffs over this short horizon, we would over-estimate the cost of exerting effort in high school, the first decision period in the model. Our counterfactual experiments, then, would deliver lower bounds for the elasticity of effort.}
+
+\subsubsection{Time 0: Belief formation}\label{sec:belief_formation}
+Before students make any choices, they form beliefs relevant for choices.  \par 
+
+\paragraph{Perceived PSU and regular admission.} Students form the following belief about the production function of the PSU entrance exam score:
+\begin{eqnarray}\label{eq:PSUb} PSU^b_{i}&=&\overline{PSU}^b_{i}+\epsilon_{i}^{Pb}\\ \nonumber   &=& \beta^{Pb}_0+\beta^{Pb}_{1i}e_i {\bf 1}(e_i< e^{Pb}_{kink,i})+\beta^{Pb}_{2i}e_i {\bf 1}(e_i\geq  e^{Pb}_{kink,i}) \\ \nonumber 
+&& +\beta^{Pb}_{3}\mbox{GPA}_{i,t-1} +\beta^{Pb}_{4}\mbox{simce}_{i,t-1}+\epsilon_{i}^{Pb} \quad \epsilon_{i}^{Pb} \sim N(0,\sigma^2_{PSU^b}),
+\end{eqnarray} 
+
+\noindent where $e_i$ is study effort, ${\bf 1}(\cdot)$ is an indicator function equal to one if the expression in parenthesis is true and to zero otherwise, $\mbox{GPA}_{i,t-1}$ is GPA in $9^{th}$ and $10^{th}$ grade, $\mbox{simce}_{i,t-1}$ is the standardized test score in $10^{th}$ grade, and $\epsilon_{i}^{Pb}$ is belief uncertainty around the expected score $\overline{PSU}^b_{i}$, i.i.d. across students. Equation \eqref{eq:PSUb} is piecewise linear in effort with a kink point at $e^{Pb}_{kink,i}$. We allow students to hold heterogeneous beliefs about the returns to effort by letting the effort coefficients and kink point vary across students. The expected score ($\overline{PSU}_i^b$), effort ($e_i$), its perceived returns ($\beta_{1i}^{Pb}$, $\beta_{2i}^{Pb}$), and the kink point ($e^{Pb}_{kink,i}$) are obtained from survey data as explained in Section \ref{sec:measurements}. \par 
+The subjective probability of regular admission conditional on taking the entrance exam is equal to the subjective probability that a student's believed score will be above the believed admission cutoff, over which the student forms a subjective probability distribution with mean  $\bar{c}^{Rb}$. Letting $A^R_i$ denote a dummy for regular admission and $\Phi$ the standard normal cumulative distribution function, the subjective probability of regular admission is:
+
+\vspace{-12pt}
+\begin{equation}\label{eq:pr_Rb}
+	Pr^b(A^R_i=1|\overline{PSU}^b_{i})=\Phi\left(\gamma_0^b +\gamma_1^b \overline{PSU}^b_{i}\right),
+\end{equation}
+\noindent Appendix \ref{sec:microfound} shows how this expression derives from uncertainty around own score and the admission cutoff. Students also form beliefs about program selectivity, conditional on regular admission, based on their expected entrance exam score. Specifically, they substitute $\overline{PSU}_i^b$ for $PSU_i$ in the exogenous stochastic process that allocates regular seats (discussed in Section \ref{sec:admissions}).\par 
+
+
+\paragraph{Perceived GPA and preferential admission.} Students form beliefs about their GPA in the last two high school years (Equation \eqref{eq:GPAb} in Appendix \ref{sec:momident}) in a way that mirrors how they form beliefs about their PSU score (Equation \eqref{eq:PSUb}).
+The only substantive difference is that we model perceived returns to effort in GPA production as linear rather than piecewise linear. This difference is driven by the survey design: for GPA, students reported the study hours they believed were required to reach only two GPA thresholds, a fixed GPA of 5.5 and their perceived top-15 cutoff.\footnote{The expected GPA in the last two high school years, $\overline{GPA}^{(11-12,b)}_{i}$, is derived from survey data on the expected GPA in the four high school years, $\overline{GPA}^{(9-12,b)}_{i}$, combined with administrative data on GPA in the first two high school years, as explained in Appendix \ref{sec:PSUbGPAb}.}\par 
+
+In treated schools, the subjective probability of preferential admission conditional on taking the entrance exam is equal to the subjective probability that a student's believed average GPA in the four high school years will be above the believed preferential admission cutoff, which is the $85^{th}$ percentile of high school GPA in the school. Students form a subjective probability distribution over this cutoff; we allow the mean of this distribution, $\bar{c}_i^{15b}$, to vary across students. The survey elicited $\bar{c}_i^{15b}$. Following an established approach in the behavioral game theory literature (e.g. \citealp{stahl1995players,costa2003learning,camerer2004cognitive,costa2006cognition,crawford2007level}), we assume that students in treated schools best-respond to their belief about the within-school cutoff, and we do not impose that their beliefs are equilibrium ones. Letting $A_i^P$ denote a dummy for preferential admission, the subjective probability of preferential admission is:
+
+\vspace{-10pt}
+\begin{equation}\label{eq:pr_Pb}
+    Pr^b(A^P_i=1|\overline{GPA}^{(9-12),b}_{i},\bar{c}_i^{15b})=\Phi\left(\pi_0^b+\pi_1^b (\overline{GPA}^{(9-12),b}_{it}-\bar{c}_i^{15b})\right),
+\end{equation}
+
+
+
+\noindent Appendix \ref{sec:microfound} shows how this expression derives from uncertainty around own GPA and the cutoff. Students form beliefs also about program selectivity, conditional on preferential admission, based on their expected high school GPA. Specifically, they substitute $\overline{GPA}_i^{(9-12,b)}$ for $GPA_i^{9-12}$ in the exogenous stochastic process that allocates preferential seats (discussed in Section \ref{sec:admissions}).\par 
+
+ 
+
+\paragraph{Perceived persistence in selective college.} Students form a belief about their likelihood of graduating from selective college, conditional on enrolling in one, directly elicited by our survey. We denote this probability by $pgrad_i^b$. Based on the evidence from section \ref{sec:pgrad}, we assume students do not believe the persistence probability depends on effort. Each student enters the model with a perceived persistence probability, which is constant over time. \par 
+
+
+
+
+
+\subsubsection{Time 1: Choice of effort in high school}\label{sec:time1}
+Students are characterized by a state-space vector $\Omega_{i1}$ containing the baseline characteristics, type, and a dummy for whether survey data is missing (see Section \ref{sec:students}), and the beliefs that do not depend on choices, $\bar{c}^{15b}_i$, $\beta_{1i}^{Pb},\beta_{2i}^{Pb}, \beta_{1i}^{Gb}$ and $pgrad_i$ (see Section \ref{sec:belief_formation}). In period 1, corresponding to the last two high school years, students choose study effort. They derive utility from the knowledge they acquire through study effort, and face a cost of exerting effort. The per-period utility associated with each effort choice $d_{i1}=e_i\in\{0, 1, ..., E\}$ is:
+
+\begin{equation}\label{eq:ut1}
+    u_{i1}(d_{i1},\Omega_{i1})=\xi_{1k_i} d_{i1}+\xi_2d_{i1}^2
+\end{equation}
+
+\noindent where the constant is normalized to zero because only the difference in utilities is identified. We let the coefficient on effort vary across student types to capture heterogeneity in preference for knowledge and effort cost.
+
+
+
+
+
+
+
+\subsubsection{Time 2: Choice to take the entrance exam}\label{sec:model_time_2}
+In period 2, students decide whether to take the PSU entrance exam. As in the real world, they do not yet know their entrance exam score or whether they are in the top 15\% of their school, and must base their decision on beliefs about these outcomes based on $\Omega_{i1}$ and the effort choice from period 1. The per-period utility associated with the second period choice $d_{i2}$ is:
+
+
+\begin{equation}\label{eq:ut_PSU}
+u_{i2}(d_{i2},\Omega_{i2}) = 
+\begin{cases}
+   -c_{0}^S+c_1^S T_i+\eta_i  & \text{if } d_{i2}=\mbox{``Take the exam"}\\
+        0                                  & \text{if } d_{i2}=\mbox{``Do not take the exam"}
+    \end{cases}                                                                                                 
+\end{equation}
+
+
+
+\noindent where $\Omega_{i2}$ contains $\Omega_{i1}$, the effort choice $d_{i1}$, and the realization of the current-period shock. $T_i$ is a dummy equal to 1 if student $i$ is in a treated school, equal to $0$ otherwise, and $\eta_i$ follows the standard logistic distribution. The per-period utility from not taking the exam is normalized to $0$ because only the difference in utilities is identified. Parameter $c^S_{0}$ captures the monetary and non-monetary costs of taking the exam.\footnote{The fee is approximately USD 30, with most students in the sample eligible for a fee waiver. However, disadvantaged students can face non-monetary barriers to taking entrance exams.} Parameter $c^S_1$ captures any treatment impact on the perceived value of taking the PSU. Students in treated schools receive orientation on the higher education system, including explanations of when the PSU is or is not required. If students previously believed the PSU was necessary for enrolling in vocational or non-selective institutions but learn that it is not, or if they believed the PSU was not necessary for enrolling in selective colleges but learn that it is, their perceived utility from taking the exam may decrease or increase. To simplify estimation, we do not let $c_0^S$ and $c_1^S$ depend on type. Nonetheless, forward-looking behavior guarantees that the type affects the choice of taking the exam through its impact on the value of college enrollment, discussed below.  \par 
+
+
+
+
+\subsubsection{Time 3: Admissions}\label{sec:admissions}
+
+
+
+
+In period 3, admissions to selective colleges through the regular and the PACE channels are realized according to objective admission chances, which depend on the entrance exam scores and GPAs actually achieved. We model the admission chances and the selectivity of the programs students are admitted to as exogenous processes that approximate the allocation mechanisms described in Section \ref{sec:regular}. Program selectivity is a reduced-form function: realized program selectivity reflects both the application portfolio submitted by the student and the admission rule that maps applications, scores, and GPA ranks into offers. We do not model application portfolios explicitly.\par 
+
+\paragraph{Regular channel admissions.} These admissions are based on actual scores on the PSU entrance exam. With $d_{i1}$ denoting the effort choice in time 1, the PSU score is produced according to the following function: 
+
+\begin{equation}\label{eq:PSU}
+    PSU_i=\beta^P_{0k_i}+\beta^P_{1}d_{i1}+\beta^P_2 GPA_{i,t-1}+\beta^P_3 \mbox{simce}_{i,t-1} +\epsilon_i^P, \quad \epsilon_i^P\sim N(0,\sigma^2_{PSU}).
+\end{equation}
+
+\noindent The type-specific intercept $\beta^P_{0k_i}$, varying across types, captures unmeasured heterogeneity in test taking ability. Given a PSU score, the probability that a student receives a regular admission is:
+
+\begin{equation}\label{eq:prAdmR}
+    Pr(A^R_i=1|PSU_i)=\Phi(\gamma_0+\gamma_1 PSU_i + \gamma_2 PSU^2_i+\gamma_3 PSU_i^3),
+\end{equation}
+ where $\Phi(\cdot)$ is the standard Normal cumulative distribution function. Equation \eqref{eq:prAdmR} approximates the allocation mechanism by assuming that regular admission chances depend solely on entrance exam scores. Conditional on receiving a regular admission, program quality $q^R_i$ (measured as the average entrance exam score of the program's regular entrants) is determined as:
+
+\begin{eqnarray}\label{eq:qR}
+    q_i^R&=&\phi^R_0 + \phi^R_1 PSU_i + \phi^R_2 PSU_i^2 + \phi^R_3 \mbox{simce}_{i,t-1}+\phi^R_4 \mbox{simce}_{i,t-1}^2  \\ \nonumber 
+    && +\phi^R_5 track_i + \phi^R_6 track_i  \times \mbox{simce}_{i,t-1} + \eta^R_r+\mu^R_i \quad \mu_i^R\sim N(0,\sigma^2_{q^R}),
+\end{eqnarray}
+
+\noindent \noindent where $PSU_i$ is the entrance exam score, $\mbox{simce}_{i,t-1}$ is the $10^{th}$ grade standardized SIMCE score, $track_i$ is the high school track (academic or vocational), and $\eta^R_r$ are region-of-residence fixed effects. Equation \eqref{eq:qR} captures the fact that the admission quality depends on the PSU score through the allocation mechanism, and on the application portfolio. The latter depends on several factors. The baseline SIMCE score and its square capture the students' background, the high school track reflects school-level application support (with the SIMCE interaction capturing support customization), and the region fixed effects capture local supply of college programs.\par 
+
+
+
+
+
+\paragraph{Preferential channel admissions.} These admissions are based on actual within-school GPA ranks, considering average GPA in the four high school years. GPA in the last two high school years is produced according to the following function:
+
+
+\begin{equation}\label{eq:GPA} GPA^{11-12}_i=\beta^{G}_{0k}+\beta^{G}_{1}d_{i1}+\beta^{G}_{2}\mbox{GPA}_{i,t-1}+\beta^{G}_{3} \mbox{simce}_{i,t-1}+\epsilon_{i}^{G} \quad \epsilon_{i}^{G} \sim N(0,\sigma^2_{GPA}).
+\end{equation} 
+
+\noindent  The type-specific intercept $\beta^{G}_{0k}$, varying across types, captures unmeasured heterogeneity in grade attainment ability. Students in control schools and students in treated schools who did not take the entrance exam do not receive preferential admissions. Among students in treated schools who took the exam, preferential admissions are assigned to those with a high school GPA in the top 15\% of their school. High school GPA, $GPA^{9-12}_i$, is the average between GPA in the first two years, $GPA_{i,t-1}$, and GPA in the last two years, $GPA^{11-12}_i$. Conditional on receiving a preferential admission, program quality $q_i^P$ is determined as:
+
+\begin{eqnarray}\label{eq:qP}
+    q_i^P&=&\phi^P_0 + \phi^P_1 GPA^{9-12}_i + \phi^P_2 (GPA^{9-12}_i)^2 + \phi^P_3 \mbox{simce}_{i,t-1}+\phi^P_4 \mbox{simce}_{i,t-1}^2  \\ \nonumber 
+    && +\phi^P_5 track_i + \phi^R_P track_i  \times \mbox{simce}_{i,t-1} + \eta^P_r+\mu^P_i \quad \mu_i^P\sim N(0,\sigma^2_{q^P}).
+\end{eqnarray}
+
+\noindent As in the regular channel, students need to submit preference lists. Equation \eqref{eq:qP} captures heterogeneity across students in application lists and in their GPA, which is the main factor determining the allocation of preferential college seats given application lists (Appendix \ref{sec:PACEadmissionprocess}).
+
+
+
+\paragraph{Discussion.} 
+For parsimony and to simplify estimation, we do not let equations \eqref{eq:prAdmR}, \eqref{eq:qR}, and \eqref{eq:qP} depend on type. In the Chilean centralized system, regular admission chances and the quality of the regular and preferential programs to which a student is admitted are determined by admission scores and application portfolios. We abstract from application portfolios through two assumptions. First, we assume that portfolios affect where, but not whether, a student is admitted through the regular channel, and therefore let regular admission probabilities depend only on the observed entrance exam score. Second, we assume that observed characteristics adequately capture portfolio choices (in both the regular and preferential application processes) when predicting program quality.
+These restrictions allow us to exclude type from these equations and estimate them without solving the model; as discussed in Section \ref{sec:paramoutside}, they provide a good fit to the data. The assumptions are made for convenience; allowing these equations to depend on type would complicate estimation, but our rich longitudinal data would, in principle, allow identification of type-dependent parameters.\par
+
+
+
+
+
+
+
+
+\subsubsection{Time 4: Choice to enroll}\label{sec:time4enroll}
+
+In model period 4, students decide whether to enroll in selective college and through which channel (regular or preferential), given their admissions. They may receive no admission, admission through one channel, or admissions through both channels. Their state space $\Omega_{i4}$ contains their admission set, their past choices that enter the current-period rewards, their belief about the likelihood of persisting in selective colleges, the current-period shock realizations, and their characteristics and type. Past beliefs about admission chances do not enter $\Omega_{i4}$, but they shape enrollment decisions through their effects on earlier choices that determined the admission sets. \par 
+
+ Students who enroll in selective colleges can drop out or persist, and these two outcomes will give different utilities. In time period 4, students form the expected utility of enrolling using the subjective probability of persisting, $pgrad^b_i$. The expected utility associated with each fourth period choice $d_{i4}$ is:
+
+
+ \begin{equation}\label{eq:Enrollmentut}
+u_{i4}(d_{i4},\Omega_{i4}) = 
+\begin{cases}
+   \lambda_{0k_i} +pgrad^b_i(\lambda^G_{0}+ q_i^R) + \nu_i^R  & \text{if } d_{i4}=\mbox{``Enroll, regular"}\\
+        \lambda_{0k_i}+\delta +pgrad^b_i(\lambda^G_{0}+ q_i^P) + \nu_i^P                                  & \text{if } d_{i4}=\mbox{``Enroll, preferential"}\\
+        0  & \text{if } d_{i4}=\mbox{``Do not enroll"}
+    \end{cases}
+    \end{equation}
+ 
+ 
+
+\noindent where $q_i^R$ and $q_i^P$  are defined in equations \eqref{eq:qR} and \eqref{eq:qP}, and $\nu_i^R$ and $\nu_i^P$ follow standard logistic distributions. The coefficient on the quality of the program is normalized to one, setting the scale for model utilities. The parameter $\delta$ captures any utility cost or premium associated with enrolling through the PACE channel. On one hand, students may derive utility from preferential enrollment if they value the additional tutoring reserved for PACE students. On the other hand, they may experience disutility if enrolling through PACE carries social stigma or undermines their self-image. The term $\lambda_0^G+q^J_i$, $J=R,P$ captures the additional value from persisting in college, which depends on college selectivity because degrees from more selective programs tend to lead to better job market opportunities.\footnote{The expected utilities from enrolling are equal to $pgrad^b_i$ times the utility from enrolling and persisting (for the regular channel, this is $\lambda_{0k_i} + \lambda_0^G+q^R_i+\nu^R_i$) plus $(1-pgrad^b_i)$ times the utility from enrolling and dropping out (for the regular channel, this is $\lambda_{0k_i}+\nu^R_i$).} The utility from non-enrollment is normalized to zero. Depending on their type, students have different enrollment utilities relative to the outside options, capturing heterogeneous tastes, barriers, and outside options. 
+
+
+
+
+
+
+
+\subsubsection{Time 5: Persistence in selective college}
+In the final model period, students who enrolled in selective college face an exogenous probability of persisting. Specifically, a student who enrolled in selective college and exerted effort $d_{i1}$ in the first period is still enrolled five years after high school with the following probability:
+\begin{equation}\label{eq:ppersist}
+    Pr(Persist_i=1|k_i,d_{i1},\mbox{simce}_{i,t-1})=\Phi(\rho_{0k_i}+\rho_1 d_{i1}+\rho_2 \mbox{simce}_{i,t-1}  ),
+\end{equation}
+\noindent where $\Phi(\cdot)$ is the standard Normal cumulative distribution function. The persistence probability depends on students' unobserved type, the effort they exerted in high school, and baseline achievement. \par 
+
+
+\subsection{Model Solution}\label{sec:solution}
+Students construct a {\itshape subjective} value function using their beliefs, which we indicate with a $b$ superscript:
+\vspace{-10pt}
+\begin{equation}\label{eq:sol}
+	V^b_t\left(\Omega_{it}\right)= \max_{d_{it}\in D_{it}} \big\{ u(d_{it},\Omega_{it})+E^b\left[V_{t+1}\left(\Omega_{it+1}|\Omega_{it},d_{it}\right)\right]\big\}.
+\end{equation}
+\noindent $\Omega_{it}$ evolves according to {\itshape objective} production functions and admission probabilities. We solve the problem by backward induction and find the value of the subjective value function in all decision periods and at all possible state space values. We compute the exact analytical solution, a sequence of optimal, non-randomized decision rules $\{d_{it}^{*}(\Omega_{it})\}$ that are deterministic functions of the state space $\Omega_{it}$.
+
+
+\section{Survey Measures, Estimation and Identification}\label{sec:surveyidentest}
+
+\subsection{Survey Measures}\label{sec:measurements}
+
+
+To estimate the model we rely on survey measures of beliefs and study effort. \par
+
+
+
+
+We obtain from the survey both the expected PSU score, $\overline{PSU}_i^b$, and students' perceived returns to effort in PSU production. The expected PSU score is an outcome variable, as it depends on effort. In contrast, the perceived returns are model initial conditions. To measure perceived returns to effort, we elicited students' beliefs about the effort required to achieve a PSU score of at least 350, 450, and 600. The left panel of Figure \ref{fig:PSUGPAreturnsrawanswers} shows the distribution of responses. To express returns in terms of the standardized PSU score, which is the unit used in the model, we standardize these hypothetical levels using the mean and standard deviation of PSU scores in the test-taking population. Letting $350^s$, $450^s$ and $600^s$ denote the standardized levels, we compute $\beta_{1i}^{Pb}$ and $\beta_{2i}^{Pb}$ in equation \eqref{eq:PSUb} as follows:
+
+\begin{eqnarray}\label{eq:PSUbreturns}
+    \beta_{1i}^{Pb}&=&\frac{450^s-350^s}{e_i^{450}-e_i^{350}} \\ \nonumber
+    \beta_{2i}^{Pb}&=&\frac{600^s-450^s}{e_i^{600}-e_i^{450}},
+\end{eqnarray}
+
+\noindent where $e_i^{X}$, $X\in\{350, 450, 600\}$, is the hypothetical effort reported in the survey for each corresponding hypothetical PSU level. By construction, a kink occurs at the effort level the student believes is necessary to achieve at least $450$ on the PSU, implying that $e_{kink,i}^{Pb}=e_i^{450}$.\par 
+
+We obtain from the survey both the expected GPA in high school, $\overline{GPA}_i^{9-12,b}$, and students' perceived return to effort in its production. The expected GPA is an outcome variable, as it depends on effort, while the perceived return is a model initial condition. To measure the perceived return to effort in GPA production, we follow a similar approach as the one for the PSU score, using students' beliefs about the effort required to obtain a GPA at least as large as two thresholds: a fixed level of 5.5. and a personalized benchmark---their perceived top 15 percent cutoff. The right panel of Figure \ref{fig:PSUGPAreturnsrawanswers} shows the distribution of responses. Appendix \ref{sec:appendixGPAreturns} provides more details.\par 
+
+
+
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.65\linewidth]{Revision/Figures R/returns_effort_PSUGPA_raw_answers_comb.png}
+    \vspace{-0.5cm}
+    \caption{\label{fig:returnseffortPSUGPAdataraw} Distribution of answers to survey questions on perceived returns to effort. The reported perceived top 15 cutoff is on average 5.85 in the sample used to construct these histograms. The survey questions are reported in the last row of Table \ref{tab:beliefelicitation}. The sample sizes for the left-side graph are: 5,344 for X=350, 5,442 for X=450, 5,469 for X=600. The sample sizes for the right-side graph are: 5,451 for X=5.5, 5,443 for X=reported perceived top 15 cutoff. }
+    \label{fig:PSUGPAreturnsrawanswers}
+\end{figure}
+
+\noindent Appendix Table \ref{tab:summaryperceivereturns} presents descriptive statistics on the perceived returns to effort thus calculated, for GPA and PSU. We set to missing the responses that imply negative perceived returns to effort. Because the elicitation asks how many study hours per week are needed to reach progressively higher targets, a response implying that a higher target requires \emph{less} effort contradicts the premise of the question; we therefore treat such responses as comprehension errors rather than as informative about beliefs, while retaining the positive responses, which are consistent with that premise.\footnote{The survey questions on perceived returns to effort refer to study hours per week, without specifying whether these are aimed at the PSU or GPA. We assume the responses reflect perceived returns to general academic effort rather than effort toward a specific outcome. Students with a negative perceived marginal effect of effort may have misunderstood the question as follows. Since they were answering a sequence of related questions, some may have interpreted the question ``How many hours per week do you think you need to study to obtain a GPA/PSU score of at least X?" as: ``How many {\itshape additional} hours per week do you need to study to obtain a GPA/PSU score of at least X relative to the previous question?" rather than as an absolute number of study hours.}\par 
+
+
+Descriptive statistics for the  individual-specific measure of the expected top 15\% cutoff for preferential admission, $\bar{c}_i^{15b}$, are presented in Table \ref{tab:summarybeliefs}. Descriptive statistics for the individual-specific perceived likelihood of graduating from a selective college, $pgrad_i^b$, are presented in Section \ref{sec:pgrad}.\footnote{We assign probabilities of 0, 0.25, 0.50, 0.75, and 1 to the Likert-scale responses.}\par 
+
+
+Effort is measured through the survey question: ``On average, how many hours a week did you study or do homework outside of class time during the first semester of this school year?". We referenced the first semester in the text of the question because it had concluded by the time we conducted the survey. We assume this survey instrument measures true effort with classical measurement error $\epsilon_i^{mee}\sim N(0,\sigma^2_{mee})$, i.i.d. across individuals and independent of all model initial conditions and shocks. We estimate $\sigma^2_{mee}$ along with the model parameters.\footnote{We treat reported study hours as a noisy measure of actual effort as self-reported time-use data is subject to recall bias \citep{bound2001measurement}. In contrast, we assume that students' reported beliefs about the study effort required to achieve various hypothetical GPA and PSU levels (see the survey questions in the bottom row of Table \ref{tab:beliefelicitation}) are free of measurement error. This assumption is justified by the fact that these belief-based responses do not require recalling past behaviors but instead involve forward-looking reasoning about academic performance. } Descriptive statistics for this variable are presented in Tables \ref{tab:summaryoutcomesbeliefs} and \ref{tab:summaryoutcomesbeliefsTC} . Both the effort question and the questions on perceived returns to effort were designed to refer to effort in the same unit---weekly study hours. This allows us to model perceived effort impacts as the product of effort and its returns.    \par 
+
+For the beliefs that serve as model initial conditions, we impute missing values as detailed in Appendix \ref{ref:imputation}.
+
+
+
+
+
+
+\subsection{Estimation and Identification}\label{sec:paramoutside}
+While many parameters are either directly measured through the survey or can be estimated using regression analyses without solving the model, the key identification challenges concern the endogeneity of effort and persistent unobserved heterogeneity. To address these challenges, we exploit experimental variation and impose structural restrictions, solving the dynamic model. The remainder of this section discusses the parameters estimated without solving the model and key parameters estimated solving the model, by indirect inference. Identification of the remaining parameters is discussed in Appendix \ref{sec:remaining_II_param}.\par 
+
+
+\subsubsection{Parameters estimated without solving the model}
+
+\paragraph{Perceived production functions.} Thanks to the strategically designed survey questions, the parameters of the PSU and GPA perceived production functions (equations \eqref{eq:PSUb} and \eqref{eq:GPAb}) are either directly measured ($\beta_{1i}^{Pb},\beta_{2i}^{Pb},e^{Pb}_{kink,i},\beta_{1i}^{Gb}$) or can be identified and estimated through simple OLS regressions, under the assumption that the measurement error on effort is orthogonal to the model's initial conditions ($\beta_0^{Pb},\beta_3^{Pb},\beta_4^{Pb},\beta_0^{Gb},\beta_2^{Gb}, \beta_3^{Gb}$). Appendix \ref{sec:PSUbGPAb} provides full details on identification and estimation. The parameter estimates are reported in Appendix Table \ref{tab:outsidePSUbGPAb}, and the goodness of fit is shown in Appendix Figure \ref{fig:GPAbPSUbfit}. Perceived college persistence is elicited directly through a survey question and the evidence in Section \ref{sec:pgrad} suggests it is not a function of effort. \par 
+
+\paragraph{Objective admission processes.} Model equation \eqref{eq:prAdmR}, approximating the algorithm determining regular admissions, is estimated through a Probit regression in the sample of entrance-exam takers (Appendix Table \ref{tab:outsidev2admreg}). The selectivity equations \eqref{eq:qR} and \eqref{eq:qP} are estimated through OLS (Appendix Table \ref{tab:outsidev2sel}). Appendix Figures \ref{fig:R3admissionlikelihood} and \ref{fig:R3admissionqualityfit} show the goodness of fit of these estimated processes. The PSU score is an excellent predictor of regular admission likelihood, and the estimated selectivity functions accurately capture how improvements in the relevant score translate into higher program selectivity. \par
+
+\subsubsection{Parameters estimated solving the model}
+We use 52 moments, fully listed in Appendix \ref{sec:moments}, to identify the remaining 34 structural parameters by indirect inference. Appendix \ref{sec:estimationwithin} provides details of the criterion function and estimation algorithm.\par 
+\paragraph{Causal impacts of effort on objective outcomes.} 
+We exploit the experimental variation, which provided an exogenous shock to effort, to help identify the parameters governing the objective causal impacts of study effort on GPA, PSU, and college persistence. \par
+
+In model equation \eqref{eq:GPA} we impose that treatment does not enter the GPA production function directly, consistent with lack of evidence that treatment could have affected GPA through channels other than study effort, such as changes in grading, teaching, or class offerings (Section \ref{sec:other_mech}). Under this exclusion restriction, randomized assignment provides exogenous variation in effort that identifies the causal effect of effort on GPA. Specifically, we target the same first-stage and reduced-form relationships that would underpin a two-stage least squares design: treatment impacts on effort (first-stage) and on GPA (reduced-form).\footnote{Because reported study effort is measured with error, when targeting moments based on study effort we use model-implied reported hours (obtained as the sum of latent effort and an orthogonal measurement error shock) rather than latent effort, ensuring the model-generated moments correspond to those from the data.} Absent the experiment, identification of these effort effects would have to rely entirely on structural assumptions linking chosen, observed effort to unobservables affecting achievement. These structural assumptions, therefore, are imposed for convenience, rather than because they are required for identification.\par
+
+Identifying the causal impact of effort on the PSU score cannot rely on a simple instrumental-variables strategy, because PSU scores are observed only for students who choose to take the entrance exam. The structural model handles selection by jointly modelling the exam-taking decision and PSU performance as functions of the same latent type. Specifically, PSU performance is governed by equation \eqref{eq:PSU},
+\[
+PSU_i=\beta^P_{0k_i}+\beta^P_1 d_{i1}+\beta^P_2 GPA_{i,t-1}+\beta^P_3 \mbox{simce}_{i,t-1}+\epsilon_i^P,
+\]
+and is observed only for students whose optimal period-2 choice is to take the exam.\footnote{We assume that treatment does not directly affect PSU performance, consistent with the evidence from Section \ref{sec:other_mech}.} The latent type $k_i$ affects PSU performance through the type-specific intercept and affects selection into exam-taking through the continuation value of college options. Thus, selection is corrected by the joint model of choices and outcomes. Since treatment shifts effort incentives and exam-taking incentives but, by random assignment, does not shift the distribution of types, treatment-control variation in effort, exam-taking, and regular admissions helps discipline the productivity of effort in PSU conditional on this modeled selection.\par
+
+
+The identification problem for persistence is analogous. Persistence is observed only for students who enroll in selective college, and enrollment is itself an endogenous choice affected by treatment. Enrollment and persistence depend on the same latent type: type enters enrollment utility through equation \eqref{eq:Enrollmentut} and persistence through the type-specific intercept in equation \eqref{eq:ppersist}. We impose that treatment does not directly enter the persistence equation.\footnote{This assumption is embedded in equation \eqref{eq:ppersist}, which rules out direct effects of treatment on persistence beyond its indirect effects through effort and enrollment choices. If treatment had an additional direct positive effect on persistence, the estimated effect of effort on persistence would be upward biased.} Variation in first-year enrollment and fifth-year persistence across treatment and control groups, together with the joint modelling of enrollment and persistence, disciplines the productivity of effort in persistence conditional on selection into college.\par
+
+
+
+
+\paragraph{Unobserved heterogeneity.} We adopt a finite-mixture approach to model unobserved heterogeneity and assume two unobserved types ($K=2$). The robustness analysis in Appendix \ref{sec: appendix3types} shows that increasing the number of types does not substantially improve the model's ability to match the data, as only 4\% of students are estimated to belong to a third type. Type probabilities follow a logit specification that depends on vector $Z_i$, consisting of gender, an indicator for whether the student at baseline was in the top 15\% of the school based on GPA in grades 9-10, and an indicator for whether the student was surveyed in our data collection, to allow for survey attrition based on unobservables. By virtue of the randomization, type probabilities do not depend on treatment status.\par 
+The variables in $Z_i$ are not added as direct determinants in the effort, PSU, GPA, enrollment, or persistence equations. Instead, they affect choices and outcomes only by shifting the probability of belonging to each latent type. Conditional on the other model initial conditions, we assume that gender, survey status, and baseline top-15 status affect choices and outcomes only through this type distribution. The auxiliary moments use this variation in two ways. Gender and survey status enter selected auxiliary regressions as regressors, so their coefficients summarize heterogeneity associated with these type-probability shifters. Baseline top-15 status is not used as a regressor; instead, we estimate key auxiliary moments separately in the full sample and in the baseline top-15 subsample, so differences across these samples summarize heterogeneity by baseline rank. These regression coefficients and sample-split moments discipline the type probabilities and type-specific parameters. Appendix \ref{sec:remaining_II_param} and Appendix \ref{sec:moments} list the corresponding auxiliary moments.\par
+
+
+
+

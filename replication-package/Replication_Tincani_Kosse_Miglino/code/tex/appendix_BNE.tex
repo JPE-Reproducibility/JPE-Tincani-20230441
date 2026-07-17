@@ -1,0 +1,62 @@
+	
+	
+%: Definition and Algorithm 	
+	\subsection{Equilibrium of the Tournament Game in the Rational Expectations Counterfactual}\label{sec:algo_re}
+
+	 In the counterfactual that debiases all students' beliefs, we must solve for the Bayesian Nash equilibrium of the tournament game that awards preferential seats in PACE schools. This is a multidimensional fixed-point problem notoriously difficult to solve. Some studies have simplified it by assuming a continuum of individuals who differ only along one dimension \citep{hopkins2004running,hickman2018human,cottonincentive}. As these simplifications are inappropriate in a setting where the populations, schools, are limited in size, and where individuals differ in more than one dimension, we adopt the different approach of lowering the dimensionality of the problem by solving for an approximation to the Bayesian Nash Equilibrium. The intuition is that the strategies of others affect own payoffs only through the probability of a preferential admission. By positing a parametric approximation for this probability, we can solve for a fixed point in its parameters, thus lowering the problem dimensionality.\footnote{ We thank Nikita Roketskiy for suggesting this approach. All errors are our own.  } \par 
+
+     
+ We start by defining the Bayesian Nash Equilibrium (BNE) of the simultaneous effort game in each treated school in the first time period, under the assumption that students have rational expectations. When making effort decisions in time period 1, students observe their type $k_i$, private information. The joint distribution of types in the school, $F(k_1,k_2,...,k_n)$, is common knowledge. There are no other shocks privately observed by students in the first time period. The distribution of all other model shocks, which are realized in later periods, is common knowledge. Model shocks include preference $(\eta_{it},\eta_{it}^R,\eta_{it}^P)$ and technological shocks $(\epsilon_{it}^P,\epsilon_{it}^G)$. Objective production functions are common knowledge. Types make this a game of incomplete information.\par
+$e_i(\cdot)$ is a function mapping $\{1,2,...,K\}$ into $\{0,1,2,...,E\}$, the set of effort choices. This is the strategy for student $i$. Given a profile of pure strategies for all students in the school, $(e_1(k_1),e_2(k_2),..., e_n(k_n))$, the expected payoff of student $i$ is
+$$\tilde{u}_i(e_i(k_i),k_i,e_{-i}(\cdot))=E_{k_{-i}}[u_i(e_1(k_1),e_2(k_2),..., e_n(k_n),k_i)],$$
+where $u_i$ is the sum of the first period utility and the expected value functions calculated using objective admission likelihoods. Let $I$ denote the set of students in the school and $E_i$ denote the pure strategy set of student $i$.
+
+\begin{definition}\label{RE_def} {\bf Rational Expectations Equilibrium.} A (pure strategy) Bayesian Nash equilibrium for the Bayesian game $[I,\{E_i\},\{\tilde{u}_i(\cdot)\}]$ is a profile of decision rules $(e^*_1(k_1),e^*_2(k_2),..., e^*_n(k_n))$ that are such that, for every $i=1,2,...,n$ and for every realization of the type $k_i$,
+	$$\tilde{u}_i(e^*_i(\cdot),k_i,e^*_{-i}(\cdot))\geq \tilde{u}_i(e^{'}_i(\cdot),k_i,e^*_{-i}(\cdot))$$
+	\noindent for all $e^{'}_i\in \{0,1,2,...,E\}$.
+	
+	
+\end{definition}
+
+\paragraph{Intuition for approximation.} Solving for the rational expectations equilibrium requires solving for a multi-dimensional fixed point in the vector of decision rules in each school. To reduce the dimensionality of the problem, we find an approximation to the rational expectations equilibrium. Given an equilibrium profile of strategies for students $-i$, $e^{*}_{-i}(\cdot)$, each effort choice of student $i$ maps into the expected probability of a preferential admission for student $i$: $P_i^{15}(e_i,e^{*}_{-i}(\cdot))$, where the expectation is taken with respect to others' types. It is only through this probability that the strategies of others enter own payoffs. We posit a parametric approximation to this probability, $\check{P}^{15}(e_i,\gamma)$, where $\gamma$ captures the strategy profiles of students $-i$. Let $\check{u}_i(e_i(\cdot),k_i,\check{P}^{15}(e_i,\gamma))$ denote $i$'s approximated expected payoff.\par 
+
+\begin{definition}\label{Approximated_RE_def} {\bf Approximated Rational Expectations Equilibrium. } An approximation to the (pure strategy) Bayesian Nash equilibrium for the Bayesian game $[I,\{E_i\},\{\tilde{u}_i(\cdot)\}]$ is a $\gamma^*$ that is such that:
+	\begin{itemize}[leftmargin=5.5mm]\setlength\itemsep{0.0em}
+		\item given $\gamma^*$, each $i$ and $k_i$ chooses a decision rule $\check{e}_i(k_i)$ that maximizes his/her approximated expected payoff:
+		$$\check{u}_i(\check{e}_i(k_i),k_i,\check{P}^{15}(\check{e}_i,\gamma^*))\geq \check{u}_i(e^{'}_i(\cdot),k_i,\check{P}^{15}(e^{'}_i,\gamma^*))$$  \noindent for every $i=1,2,...,n$, $k_i=1,2,...K$ and for all $e^{'}_i\in \{0,1,2,...,E\}$.
+		\item given the profile of decision rules $(\check{e}_1(k_1),\check{e}_2(k_2),..., \check{e}_n(k_n))$, the approximated admission probability is close to the true admission probability for all $i$: $P_i^{15}(\check{e_i},\check{e}_{-i}(\cdot))\approx P^{15}(\check{e}_i,\gamma^*)$ $\forall i=1,...,n$.
+	\end{itemize}
+\end{definition}
+
+\paragraph{Algorithm.} Solving for the approximated rational expectations equilibrium requires solving for a fixed point problem of the dimension of $\gamma^{*}$.  We use a linear probability approximation: $\check{P}^{15}(e_i,\gamma)=\gamma_0+\gamma_1 GPA_{it}(e_i;\epsilon_{it}^G)+\gamma_2 X_i + \gamma_3 Z_j$, where $GPA_{it}$ is own average GPA in the four high school years, $X_i$ are baseline student characteristics and $Z_j$ are baseline school characteristics, and use the following algorithm:
+
+
+\begin{enumerate}[leftmargin=5.5mm]\setlength\itemsep{0.0em}
+	\item Draw types and shocks for all students and fix these draws across iterations.
+	\item From the data on treated schools, estimate a linear probability model of the likelihood of being in the top 15\% in terms of high school GPA as a function of own high school GPA and of baseline characteristics of the student $(X_{i})$ and of the school $(Z_j)$ selected through LASSO:
+	\begin{equation*}
+		Top15_i=\gamma_{0}+\gamma_{1}GPA_{it}+\gamma_{2}X_{i}+\gamma_{3}Z_j+\epsilon_{ij}
+	\end{equation*}
+	Let the estimates $\hat{\gamma}_{0},\hat{\gamma}_{2},\hat{\gamma}_{3}$ be fixed across iterations, let the estimate $\hat{\gamma}_{1}$ be our first guess for all schools $j$: $\gamma_{1j}^{(s=0)}$. The goal is to find a fixed point in $\gamma_{1j}$.\par
+
+	\item At the current iteration $s$, let students believe that the probability of being in the top 15\% of the school is:
+	\begin{equation*}
+		P_i^{15(s)}(e_i,\check{e}_{-i}(\cdot))=\hat{\gamma}_{0}+\gamma_{1j}^{(s)}GPA_{it}(e_i;\epsilon_{it}^G)+ \hat{\gamma}_{2}X_{i}+\hat{\gamma}_{3}Z_j.
+	\end{equation*}
+	\item Given these beliefs, find the best response of each student by solving the dynamic programming problem. Let $e_{it}^{(s)}$ be the utility-maximizing effort that each student exerts.
+	\item Calculate $GPA_{it}^{(s)}=GPA(e_{it}^{(s)};\epsilon_{it}^G)$ for each student, and simulate a dummy for whether each student's GPA is in the top 15\% of their school ($Sim\_Top15_i$). 
+
+	\item From the simulated data on top 15\% placements and $GPA(e_{it}^{(s)};\epsilon_{it}^G)$, compute $\gamma_{1j}^{(s+1)}$ by OLS:
+
+    \begin{equation*} 
+    Sim\_Top15_i-\hat{\gamma}_0-\hat{\gamma}_2X_i-\hat{\gamma}_3Z_j=\gamma_{1j}^{(s+1)} GPA_{it}^{(s)} +\eta_{ij}^{(s)}
+    \end{equation*}
+
+	\item If $\gamma_{1j}^{(s+1)}$ is sufficiently different from $\gamma_{1j}^{(s)}$, go back to point 3, otherwise stop.
+	
+\end{enumerate}
+We checked for uniqueness by plotting the $\gamma_{1j}^{(s+1)}$ against $\gamma_{1j}^{(s)}$ and found a unique fixed point in each school.
+
+
+
+	

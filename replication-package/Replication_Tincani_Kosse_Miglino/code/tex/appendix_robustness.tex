@@ -1,0 +1,84 @@
+
+\clearpage
+
+     \section{Robustness Analysis}\label{sec:appendixrobustness}
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{D\arabic{table}}
+	
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{D\arabic{figure}}
+
+ 
+\subsection{Experimental Analysis}\label{sec:appendixrobustnessexp}
+
+
+
+\subsubsection{Lack of strategic high school enrollments}\label{sec:lackofstrat}
+
+The GPA and achievement reductions are unlikely to be the result of a change in the ability composition of students in the treatment group, which could occur when students strategically select into high schools offering admission advantages. First, the announcement that a school was in PACE was made after the deadline for school enrollment in the $11^{th}$ grade, and as students need to be in a PACE school for the last two high school years to benefit from the percent rule, they did not have an incentive to change schools at a later time either. Second, the student characteristics are balanced across treatment groups (Table \ref{tab:balancing}), indicating a lack of strategic high school selection. Third, we further analyzed school transitions in and out of PACE schools around the time of our experiment and found no systematic relation between baseline test scores and entering or leaving a PACE school (Table \ref{inoutflow}). Finally, strategic high school enrollment should induce more advantaged students to enter schools where preferential admission policies are in place, leading to an observed {\itshape increase}, not decrease, in GPA and test scores.
+
+\input{Revision/Tables R/in_out_flow}
+
+
+\subsubsection{Survey attrition}\label{label:surveyatt}
+
+The response rate in our survey data is $69.4\%$ percent in the control group, and it is not statistically significantly different in the treatment group, suggesting the absence of selective attrition. This holds for the full sample and also for the Top 15\% sample, see Table \ref{attritionboth1}.
+Table \ref{tab: tableebounds} presents \cite{lee2009training} bounds for the treatment effects, confirming that the estimated treatment effects are not due to selective attrition. 
+
+\input{Revision/Tables R/attrition_both.tex}
+
+\input{Revision/Tables R/leebounds_effort_achievement.tex}
+
+
+
+
+\subsubsection{Validity of the survey-based findings} \label{sec:predvalsurvey}
+
+We collected standardized achievement scores and measures of effort because this information is not available in the administrative data. GPA is available for all students but is not an achievement measure comparable across schools as it is graded within schools. The standardized PSU score is graded centrally, but it is available only for those who took the entrance exam, a selected sample. Our achievement measure does not suffer from this self-selection, and it correlates strongly with the PSU score (0.490), including with its Language component (0.437).\footnote{The correlation between the Mathematics and the Language components of the PSU exam is 0.410.} Several factors point to the validity of the survey-based outcomes. First, our measures have strong predictive validity: they can independently predict high-stake outcomes up until five years after the data collection, when our data end. For example, Table \ref{tabvalidateachievementeffort}  shows that, controlling for student characteristics and baseline test scores, a one standard deviation increase in the achievement test score is associated with an increase in the probability that a student is enrolled in the fifth year of college of  3.1 p.p. (p=0.000), or $50\%$ of the sample mean. The study effort measure has equally strong predictive validity. Additionally, the results are robust to using item response theory to calculate the achievement score (Table \ref{tabreducedformirt}).\par  
+\input{Revision/Tables R/validate_achievement_effort.tex}
+\input{Revision/Tables R/tab_reduced_form_irt}
+
+\subsubsection{Robustness of the results on heterogeneity by beliefs (Table \ref{TEprecollegeoutcomesperceiveddistcutoff})}\label{sec:robustnesshet}
+
+The subjective expectations were not elicited at the experiment's baseline. This raises the concern that these variables might have been influenced by the treatment. We address this issue as follows:
+\begin{itemize}
+    \item Column (1) of Table \ref{tab: TEsubjectiveexpectations} shows that the treatment had no statistically significant impact on the perceived GPA distance from the cutoff we use to build Table \ref{TEprecollegeoutcomesperceiveddistcutoff}, for neither of the two samples used in the analysis. This measure relies on data on the perceived top 15\% cutoff from a separate survey administered closer to the experiment's baseline, implemented in collaboration with the Ministry of Education \citep{mineduc_estudio_pace_estudiantes_mrun}.\footnote{This survey was administered in April of the $12^{th}$ grade. Our research team designed the questions eliciting subjective expectations, while the Ministry administered the survey in schools. The English translation of the question we use is: ``Think about the top 15\% of students in your school's $12^{th}$ grade, those with the best GPA. What is the lowest GPA a student in your school would need to achieve to be in the top 15\% of students with the best GPA? (ENTER A NUMBER FROM 1.0 to 7.0)". When the answer to this April survey question is missing, we use data from our main survey conducted in September-November and reported in the third row of Table \ref{tab:beliefelicitation}.}
+    \item Column (2) of Table \ref{tab: TEsubjectiveexpectations} shows that the treatment had only a small positive effect on the likelihood that a student expects a PSU score smaller than or equal to the median perceived PSU, which we use to restrict the sample in Panel B of Table \ref{TEprecollegeoutcomesperceiveddistcutoff}. This effect is not significant once we control for multiple hypotheses testing, as evidenced by the Romano-Wold adjusted p-value and the q-value, reported in the Table. Moreover, Table \ref{tab:balancingwithinmedexpPSU} shows that the sub-sample used for the analysis in Panel B of Table \ref{TEprecollegeoutcomesperceiveddistcutoff} remains well balanced across the treatment and control groups in terms of observed baseline characteristics. The perceived PSU score is obtained from the survey question reported in the first row of Table \ref{tab:beliefelicitation}.
+\end{itemize} 
+ This evidence gives us confidence that the results reported in Table \ref{TEprecollegeoutcomesperceiveddistcutoff} are unlikely to be driven by imbalanced unobservables.
+
+
+\input{Revision/Tables R/TE_subjective_expectations_michela}
+
+
+
+\input{Revision/Tables R/sample_balance_within_med_exp_PSU}
+
+
+
+
+
+
+
+
+     
+\subsubsection{Predictive validity of the 
+belief measures.}\label{sec:predvalbeliefs} 
+We examine the predictive validity of the belief measures in Table \ref{tabvalidateallbeliefs}, leveraging unique data linkages between elicited beliefs, their realizations and students' related choices.\par 
+
+\input{Revision/Tables R/validate_beliefs.tex}
+
+First, the belief measures reflect actual outcomes: perceived GPA distance from cutoff and perceived PSU are positively and significantly correlated with their respective realizations (column (1) of Panel A and B). 
+Second, perceived PSU predicts the decision to take the entrance exam of both treated and control students, consistent with their incentive to obtain a regular admission (column (2) of Panel A).
+Third, perceived GPA distance from cutoff predicts the decision to take the entrance exam of treated students only, consistent with their incentive to obtain a preferential admission (column (2) of Panel B).
+
+The decision to sit the entrance exam is taken before observing the realization of the GPA distance from cutoff and the realization of the PSU score. It is associated with both measures of beliefs in the way we would expect, suggesting these measures contain meaningful information on students' beliefs.\par %
+
+
+
+
+     \input{Revision/appendix_three_types}
+
+
+
+\clearpage

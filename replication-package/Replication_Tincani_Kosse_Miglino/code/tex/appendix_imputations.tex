@@ -1,0 +1,19 @@
+
+
+\subsection{Additional Details on Measuring Perceived Returns to Effort in GPA Production}\label{sec:appendixGPAreturns}
+Unlike with PSU, we assume the perceived returns to effort in GPA production are constant across GPA levels; since we only observe two hypothetical effort and GPA levels, we cannot measure nonlinearities. We express returns directly in GPA points rather than standardizing because GPA is already measured on a meaningful scale, the same used for the top 15 percent cutoff. Letting $e_i^{5.5}$ and $e_i^{T15_i}$ denote the reported hypothetical effort levels and $T15_i$ the reported perceived cutoff, we compute the perceived return to effort in GPA production, $\beta_{1i}^{Gb}$ in equation \eqref{eq:GPAb}, as follows: 
+
+\begin{equation}\label{eq:GPAbreturns}
+    \beta_{1i}^{Gb}=\frac{T15_i-5.5}{e_i^{T15_i}-e_i^{5.5}}.
+\end{equation}
+
+\subsection{Imputation of Beliefs Serving as Initial Conditions}\label{ref:imputation}
+For students with missing responses on perceived returns to effort and selective college persistence, we impute $\beta_{1i}^{Pb},\beta_{2i}^{Pb},e_{kink,i}^{Pb},\beta_{1i}^{Gb},pgrad_i^b$ using a LASSO regression model. The model achieves an excellent fit, as shown in Figure \ref{fig:GoFbeliefsimputation}, with model specification provided in the Figure notes. For students with missing responses on the perceived top 15\% cutoff, we impute them with their answers to an earlier survey conducted by the Ministry of Education in April, which included a question measuring the same construct.\footnote{The question in the Ministerial survey was: ``Think of the 15\% of $12^{th}$ grade students in your school with the highest GPA. What is the lowest GPA a student in your school would need to achieve to be in the top 15\% of students with the best GPA?". As in our main survey (see Table \ref{tab:beliefelicitation}), the question uses the Chilean term for GPA that is widely understood to refer to the grade point average across all four years of high school. } For any remaining missing values, we substitute the actual top 15\% cutoff, ensuring that our findings on the role of biased beliefs can be conservatively interpreted as lower bounds.
+
+
+  \begin{figure}[H]
+	\centering
+	\centering %[width=\linewidth]
+	\includegraphics[scale=0.3]{Revision/Figures R/PSU_GPA_ppersist_belief_GoF.png}
+	\caption{\label{fig:GoFbeliefsimputation} \scriptsize Goodness of fit of LASSO regression model used to impute missing data on beliefs that are initial conditions in the model: $\beta_{1i}^{Pb},\beta_{2i}^{Pb}, e_{kink,i}^{Pb},  \beta_{1i}^{Gb}, pgrad_i^b$. The list of all potential predictors is: SIMCE score, gender, age, low-SES status, school track, second and third powers of SIMCE score and of age, and all 36 pairwise interactions between these variables.  }
+\end{figure}

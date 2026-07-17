@@ -1,0 +1,164 @@
+\section{Additional Figures}\label{app:figures}
+
+	
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{B\arabic{figure}}
+		
+\begin{figure}[H]
+\center{\includegraphics[scale=0.2]{Revision/Figures R/enrollment_SUA_gradient.png}}	
+\caption{\label{fig:enrollment_gradient} Percentage of 18-19 year-old who are enrolled in college in Chile by family income quintile.}	
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+
+	\includegraphics[scale=0.18]{Revision/Figures R/hist_majors_pace_regular_slots.png}
+	\caption{\label{fig:pace_vs_regular_majors} Study field distribution of PACE and regular seats in selective colleges. A degree program is a college and major combination. Source: Administrative data for the 2018 centralized admission process.}
+
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+
+	\includegraphics[scale=0.18]{Revision/Figures R/hist_quality_pace_regular_slots.png}
+	\caption{\label{fig:pace_vs_regular} Distribution of selectivity of PACE and regular seats in selective colleges. Selectivity is measured as the average PSU entrance exam score among all regular entrants in the program, which is a college and major pair. Source: Administrative data for the 2018 centralized admission process.}
+
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Revision/Figures R/timeline.png} 
+	\caption{\label{application_timeline} Timeline (months and years shown).  }
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+
+	\includegraphics[scale=0.15]{Revision/Figures R/sit_PSU_prepared_admitted_lpoly_inpaper.png}
+	\caption{\label{fig:PSU_admissions_lpoly} Decision to take and prepare for PSU entrance exam and objective admission likelihood. Sample of students in control schools. Method: smoothed values from kernel-weighted local polynomial regression.}
+
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+\includegraphics[scale=0.22]{Revision/Figures R/PSU_belief_actual_distribution.png}
+	\caption{\label{fig: PSU_belief_distribution} Distribution of beliefs and realizations over PSU score intervals. We elicited students' beliefs through the survey question `Suppose that you will take the PSU entrance exam
+this year. What do you think your PSU score
+will be?' The possible answers are the intervals indicated on the x-axis. Both histograms focus on the sample of students that answered the survey question and took the PSU entry exam.}
+
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.15]{Revision/Figures R/GPA_hist.png}
+\caption{\label{fig:GPA_hist} Evidence of grade compression: Histogram of $12^{th}$ grade GPA.}
+\end{figure}
+		
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{Revision/Figures R/discrimination.png}		\caption{\label{fig:discrimination} Evidence of grade compression: GPA does not discriminate between students as well as the achievement score does.}
+\end{figure}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{Revision/Figures R/beliefs_hetero_byranksimce_inpaper.png}
+	\caption{\label{fig:hetero_beliefs} Heterogeneity of subjective beliefs by baseline within-school rank and by baseline test scores. Sample of students in control schools. The bottom graphs trim the top and bottom 1\% of SIMCE scores. Method: smoothed values from kernel-weighted local polynomial regression. }
+\end{figure}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Revision/Figures R/heterog_effects_p_grad.png}
+	\vspace{-0.4cm}
+	\caption{\label{fig:heter_p_grad_effect} Heterogeneity of the effects of PACE on the perceived likelihood of graduating from selective college. Each dot is the coefficient on {\itshape Treatment} from an OLS regression where: {\itshape Treatment} is a dummy variable indicating whether a student is in a school that was randomly assigned to be in the PACE program, the controls are the standard set of controls, Inverse Probability Weights and field-worker fixed effects are used, the estimation samples are quintiles in the within-school rank based on $10^{th}$ grade GPA (left panels) and quintiles in the distribution of $10^{th}$ grade standardized test scores (right panels). The units of measurements of the treatment effects are percentage points. The bars are $95\%$ confidence intervals built using standard errors clustered at the school level. The survey responses were collected on a five-point Likert scale. Each row in the graph represents a different numerical assignment to assess the robustness of the results to variations in the numerical scale.}
+	%\end{minipage}
+\end{figure}
+
+
+
+
+
+
+
+
+   \begin{figure}[H]
+	\centering
+	\centering %[width=\linewidth]
+	\includegraphics[scale=0.19]{Revision/Figures R/admission_regular_PSU_fit.png}
+    \vspace{-0.4cm}
+	\caption{\label{fig:R3admissionlikelihood} \scriptsize Goodness of fit of the regular admission likelihood function. This figure shows the fit of the function approximating the likelihood of obtaining a regular admission as a function of the PSU score, reported in equation \eqref{eq:prAdmR}. The top graph shows smoothed values from kernel-weighted local polynomial regressions. The bottom graph shows the marginal distribution of the PSU score among those in our study sample who took the PSU exam, which is the sample used to estimate the regular admission likelihood function. Table \ref{tab:outsidev2admreg} provides the parameter estimates.  }
+\end{figure}
+
+
+
+  \begin{figure}[H]
+	\centering
+
+	\centering %[width=\linewidth]
+	\includegraphics[scale=0.30]{Revision/Figures R/admission_quality_fit_rescale.png}
+    \vspace{-0.4cm}
+	\caption{\label{fig:R3admissionqualityfit} \scriptsize Goodness of fit of the admission selectivity functions. This figure shows the fit of the functions approximating the selectivity of the program to which an applicant is admitted through the PACE channel (left column) and the regular channel (right column), as a function of the relevant score. The functions are reported in equations \eqref{eq:qR} and \eqref{eq:qP}. The relevant score is high school GPA for PACE admissions and PSU entrance exam score for regular admissions. Selectivity is measured as the average standardized PSU score of all regular entrants into the program defined as a selective college and major pair, in 2018. The top graphs show smoothed values from kernel-weighted local polynomial regressions. The bottom graphs show the marginal distribution of the scores in the populations with a PACE (left) or regular (right) admission, which are the samples used to estimate the selectivity functions. Table \ref{tab:outsidev2sel} provides the parameter estimates.  }
+\end{figure}
+
+
+
+
+
+ 
+     
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Revision/Figures R/TE_perceived_returns_effort_REC_REPT.png}
+	\vspace{-0.4cm}
+	\caption{\label{fig:reteffRE} This Figure shows the simulated returns to effort in college admission probabilities at each effort level, comparing scenarios without and with the PACE treatment. The results are based on counterfactual simulations in which students have rational expectations in both cases.  } 
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Revision/Figures R/effects_info_CC_bysimce.png}
+	\vspace{-0.4cm}
+	\caption{ Simulated effects of various interventions, by baseline SIMCE test scores. These graphs are based on simulations from the control group sample. For each student, we simulate outcomes in the control condition, and under six counterfactual treatments. We calculate the treatment effect for each individual by taking the difference between the outcome in the treatment and in the control condition, and plot local polynomial graphs of treatment effects as a function of baseline Simce test scores (after trimming the top and bottom 1\% of the score). The outcome ``Effort" is measured in study hours per week, all other outcomes are rates. ``Persistence" refers to the rate at which students in the sample enroll and persist; ``Dropouts" refers to the rate at which students in the sample enroll and drop out.  The six interventions are: (1) full information, debiasing all beliefs so students hold rational expectations, but without introducing any preferential admission policy (RE); (2) PACE and full information, debiasing all beliefs so students hold rational expectations and introducing PACE (P + RE); (3) PACE plus information debiasing beliefs about the probability of persisting in college only (P + DB pers); (4) PACE plus information debiasing beliefs about pre-college outcomes, only (P + DB pre-coll); (5) PACE plus information debiasing beliefs about the returns to effort in persistence, debiasing only the perceived-returns-to-effort (slope) component of the college-persistence likelihood while laving the perceived level biased (P + Value eff); (6) only PACE without any information intervention, i.e. the baseline scenario (P).\label{fig:effects_info_by_simce}} 
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Revision/Figures R/college_entrants_multiple_cutoffs_count.png}
+	\vspace{-0.4cm}
+	\caption{ Selective college persistence and characteristics of selective college entrants. This figure shows average 5-year college-persistence rates, baseline test scores and pre-college effort for college entrants in the control group--where no intervention is introduced--and under five PACE designs characterized by different cutoffs for preferential admissions: top 5\%, top 10\%, top 15\% (the baseline scenario), top 20\%, top 25\%. The control group mean is represented by the first bar and by the dashed horizontal line. SIMCE scores and pre-college effort are standardized to have mean zero and variance one in the control group. \label{fig:collegeentrantsmcutoffs} } 
+\end{figure}
+
+
+
+
+
+ \pagebreak

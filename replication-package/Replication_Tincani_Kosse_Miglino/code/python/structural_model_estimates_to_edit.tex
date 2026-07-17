@@ -1,0 +1,67 @@
+\renewcommand{\arraystretch}{1.0}
+\begin{table}[H]\centering
+\footnotesize
+\caption{\textsc{Parameter Estimates}\label{tab:modelestimates}}
+\begin{tabular}{l*{1}{lcc}}
+\hline
+Symbol & \multicolumn{1}{c}{Description} & Estimate & Standard Error\\
+\hline
+ & \multicolumn{1}{c}{\textsc{A. Preferences}} & &\\
+%\cline{2-2}
+$\xi_{11}$ & Linear term in utility from study hours, type 1  & $-0.006$ & (0.007) \\
+$\xi_{12}$ & Linear term in utility from study hours, type 2& $-0.305$ & (0.247) \\
+$\xi_2$ & Quadratic term in utility from study hours & $-0.006$ & (0.007) \\
+$c_0^S$ & Cost of taking the entrance exam & $0.068$ & (0.056) \\
+$c_1^S$ &Treatment impact on the perceived value of taking the entrance exam & $-0.113$ & (0.114) \\
+$\lambda_{01}$ & Constant in utility from enrolling and dropping out from college, type 1   & $0.292$ & (0.280) \\
+$\lambda_{02}$ & Constant in utility from enrolling and dropping out from college, type 2   & $0.761$ & (1.242) \\
+$\lambda^{G}_{0}$ & Constant in utility from graduating from college & $0.230$ & (0.251) \\
+$\delta$ & Additional utility from PACE enrollment & $-0.895^{**}$ & (0.426) \\ %NB: manually add - as it enters with minus in code
+
+
+
+
+ & \multicolumn{1}{c}{\textsc{B. Technology}} & &\\
+%\cline{2-2}
+$\beta^{G}_{01}$ & Constant in GPA production, type 1  & $0.720$ & (0.800) \\
+$\beta^{G}_{02}$ & Constant in GPA production, type 2   & $1.153$ & (0.807) \\
+$\beta^{G}_{1}$ & Coefficient on study hours in GPA production & $0.045^{*}$ & (0.031) \\
+$\beta^{G}_{2}$ & Coefficient on baseline GPA in GPA production & $0.851^{***}$ & (0.145) \\
+$\beta^{G}_{3}$ & Coefficient on Simce in GPA production & $0.120$ & (0.097) \\
+$\beta^{P}_{01}$ & Constant in PSU production, type 1   & $-0.122$ & (0.116) \\
+$\beta^{P}_{02}$ & Constant in PSU production, type 2   & $-1.250^{***}$ & (0.196) \\
+$\beta^{P}_{1}$ & Coefficient on study hours in PSU production & $0.001$ & (0.001) \\
+$\beta^{P}_{2}$ & Coefficient on baseline GPA in PSU production & $0.051^{**}$ & (0.025) \\
+$\beta^{P}_{3}$ & Coefficient on Simce in PSU production & $0.246^{*}$ & (0.129) \\
+$\rho_{01}$ & Constant in persistence likelihood index, type 1   & $-0.015$ & (0.019) \\
+$\rho_{02}$ & Constant in persistence likelihood index, type 2   & $-0.109$ & (0.206) \\
+$\rho_{1}$ & Coefficient on study hours in persistence likelihood index & $0.030^{*}$ & (0.017) \\
+$\rho_{2}$  & Coefficient on Simce in persistence likelihood index & $0.587$ & (0.597) \\
+
+
+ & \multicolumn{1}{c}{\textsc{C. Subjective beliefs}} & &\\
+%\cline{2-2}
+$\gamma^{b}_{0}$ & Constant in index for subjective probability of regular admission & $-0.408$ & (0.493) \\
+$\gamma^{b}_{1}$ & Coefficient on PSU in index for subjective probability of regular admission & $9.862$ & (8.711) \\
+
+$\pi^{b}_{0}$ & Constant in index for subj. probability PACE admission & $-4.158$ & (3.979) \\
+$\pi^{b}_{1}$ & Coefficient on distance from cutoff in index for subj. prob. PACE admission & $0.073$ & (0.079) \\
+
+ & \multicolumn{1}{c}{\textsc{D. Unobserved heterogeneity and shocks}} & &\\
+%\cline{2-2}
+$\omega_{20}$ & Constant in type probability index & $1.499^{**}$ & (0.760) \\
+$\omega_{21}$ & Coefficient on whether missing from survey in type probability index & $3.149$ & (2.668) \\
+$\omega_{22}$ & Coefficient on female in type probability index & -0.343 & (0.326) \\
+$\omega_{23}$ & Coefficient on baseline top 15\% status in type probability index & $-3.882^{*}$ & (2.314) \\
+$\sigma_{mee}$ & Standard deviation of measurement error on effort & $0.131$ & (0.115) \\
+
+$\sigma_{GPA}$ & Standard deviation of GPA shock & $0.345^{***}$ & (0.083) \\
+$\sigma_{PSU}$ & Standard deviation of PSU shock & $0.046$ & (0.041) \\
+
+\hline
+\end{tabular}
+\vskip-10pt
+\begin{tablenotes}[flushleft]\singlespacing
+\item \scriptsize \textsc{Note. --} Standard Errors in parenthesis, cluster-bootstrapped using 50 bootstrap samples. $^{*}p<0.10;$ $^{**}p<0.05;$ $^{***}p<0.01.$ Estimation imposes parameter bounds centered at calibrated starting values, with selected parameters subject to positivity constraints. The replication package initializes at the estimated parameter vector and implements a local search with slightly relaxed convergence tolerances to reduce computation time, retaining 20 shock draws. Bootstrap estimations use the same constraints but reduce the number of shock draws from 20 to 2 for computational tractability. Full details are provided in the replication package.
+\end{tablenotes}
+\end{table}

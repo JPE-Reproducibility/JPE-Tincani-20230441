@@ -1,0 +1,60 @@
+\subsection{Data Construction}\label{sec:data}
+
+Table \ref{data_overview} lists the administrative and primary data sources. We linked them through unique student, classroom and school identifiers and built a longitudinal dataset that follows $9,006$ students for nine years, from ninth grade to five years after leaving high school.\par
+
+
+\begin{table}[ht!]
+	\footnotesize
+	\centering
+	\caption{\textsc{Overview of Data} }\label{data_overview}
+	\begin{tabularx}{\textwidth}{p{6.2cm} X p{2.2cm} p{1.2cm}}
+		\hline
+		\textsc{Dataset (Citation)} & \textsc{Variables} &  \textsc{Collected} & \textsc{Source} \\
+		\hline
+		\\ \vspace{-0.4cm}
+		1. {\itshape SIMCE} \citep{agencia_simce_2006_2018} & Achievement test scores, background characteristics & Grade 10 & Admin \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		2. {\itshape SEP} \citep{mineduc_sep_2015}   & Very-low-SES classification ({\itshape Prioritario} student)  & Grade 10 & Admin \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		3. School records 1 \citep{mineduc_high_school_enrollment_2006_2018,mineduc_experimental_high_school_lists} & High-school enrollment  & Grades 9-12 & Admin \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		4. Student survey \citep{tincani_kosse_surveys_2017,mineduc_estudio_pace_estudiantes_mrun}   & Study effort, beliefs about self and others & Grade 12 & Primary\\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+			5. Teacher survey \citep{tincani_kosse_surveys_2017}  & Effort and focus of instruction of Mathematics and language teachers  & Grade 12 & Primary \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+			6. School-principal survey \citep{tincani_kosse_surveys_2017}   & Support classes, assessment methods, classroom formation & Grade 12  & Primary \\[0.5cm]
+            \addlinespace[0.3cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		7. Achievement \citep{tincani_kosse_surveys_2017}  & Achievement test scores & Grade 12 & Primary \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		8. School records 2 \citep{mineduc_ranking_nem_2018,mineduc_rendimiento_estudiante_2002_2018,mineduc_academic_performance_high_school_2002_2018} & GPA (overall and by subject), grade progression  & Grades 9-12 & Admin \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		9. Higher education records \citep{demre_sies_psu_pdt_2018_2022,chiuri_miglino_tincani_oecd_classifications_2026,mineduc_sua_universities,mineduc_subsecretaria_sua_2016,sies_higher_ed_enrollment_private_mrun_2007_2018,sies_higher_ed_enrollment_2018_2022,sies_higher_ed_graduation_2019_2022,tincani_miglino_mineduc_geocoded_distance_2026}   & Entrance exam (PSU) scores, applications, admissions, enrollments and graduation or persistence at five years in selective colleges via regular channel (STEM and non-STEM), seat selectivity, seat geographic location, enrollments and graduation or persistence at five years in vocational higher-education institutions and non-selective colleges & Years 1-5 after high school graduation & Admin \\[0.5cm]
+		%\midrule
+        \addlinespace[0.3cm]
+		10. PACE program records \citep{mineduc_pace_admissions_criteria_2018} & Allocation of PACE seats in selective colleges, applications, admissions, enrollments and graduation or persistence via PACE channel, seat selectivity, seat geographic location & Years 1-5 after high school graduation & Admin \\
+		\hline
+	\end{tabularx}
+	\vspace{-10pt}
+	\begin{tablenotes}\singlespacing
+		\item	\scriptsize \textsc{ Note. --} SIMCE: {\itshape Sistema Nacional de Evaluaci\'{o}n de Resultados de Aprendizaje}, SEP: {\itshape Subvenci\'{o}n Escolar Preferencial}.  \\ 
+	\end{tablenotes}
+\end{table}
+
+
+For all $9,006$ students enrolled in the 128 sampled schools, we obtained administrative information on baseline socioeconomic characteristics, baseline standardized test scores, school grades in high school (years 9 to 12), grade progression, college entrance exam scores, regular and PACE channel admissions, enrollments and persistence or graduation up to five years after high school graduation, by type of college major (STEM and non-STEM). Table \ref{tab: listSTEMmajors} provides a detailed list of the areas included in STEM according to the definition provided by the \citet{STEMclassification}.   To gain insights on outside options, we also collected administrative data on enrollments and persistence or graduation up to five years after leaving high school in all higher education programs outside of selective colleges.\par 
+
+
+
+To complement the administrative data, we collected primary data in all 128 sampled schools between September and November 2017, when students were completing $12^{th}$ grade (Appendix \ref{sec:fieldwork_info} describes the fieldwork). Our primary data contain four main pieces of information. First, we measured pre-college achievement. As standardized achievement tests are not administered universally at the end of high school, we administered a 20-minute mathematics achievement test to all students (see \citealp{behrman2015aligning} for a similar approach), developed for us by professional testing agencies. Without this skill measure, it would be difficult to estimate policy impacts on pre-college achievement: using the scores on the entrance exam could introduce selective attrition bias, because the decision to take the exam could be affected by the policy, and using GPA could give results that are hard to interpret, because GPA is not comparable across schools. Second, we elicited study effort through the survey instruments used in Mexican high schools by \citealp{behrman2015aligning} and \citealp{todd2018accounting}, complemented with questions on entrance exam preparation. In the reduced-form analysis, we combine these items into a standardized study-effort index; in the structural model, effort is measured directly as hours of study per week. Third, we elicited subjective beliefs about future outcomes (i.e., college graduation and wages) and returns to effort (i.e., the productivity of effort for entrance exam scores and GPA). English translations of the key survey questions about beliefs are reported in Table \ref{tab:beliefelicitation}. Finally, we surveyed mathematics and Spanish teachers, and school principals, to obtain information on the policy response of schools.\par 
+
+We surveyed $6,094$ students, approximately $70\%$ of those enrolled in the 128 sample schools. Attrition was not selective across the treatment and control groups (Appendix \ref{label:surveyatt}). Our response rate compares favorably with that of ministerial surveys (\citealp{mineduc2018pilot,mineduc2017impl}), and it reflects dropout in the last weeks of the last high school year (schooling is compulsory until then). We account for survey attrition in two ways. For the regression analyses, we built inverse probability weights using baseline administrative data. For the estimation of the structural model, we let the distribution of unobservable characteristics depend on whether a student was surveyed, to allow for survey-non-response based on unobservables. \par  
+
