@@ -1,6 +1,11 @@
-title: "Stand-in title"
-author: "Dr Prof James 'JayJay' Author"
-paper_id: 12345678
+title: "eliefs and the Incentive Effects of Preferential College Admissions: Evidence from an Experiment and a Structural Model"
+author: "Tincani"
 round: 1
-repo: "https://www.github.com/standin"
-dropbox_rel_path: "JPE/Author-12345678/1"
+repo: "https://github.com/JPE-Reproducibility/JPE-Tincani-20230441"
+paper_id: 20230441
+journal: "JPE"
+paper_slug: "Tincani-20230441"
+dropbox_rel_path: "JPE/Tincani-20230441/1"
+package_size_gb: 3.66
+package_max_file_size_gb: 2
+package_max_pkg_size_gb: 10
