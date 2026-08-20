@@ -1,27 +1,46 @@
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/Replicated_paper.pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/Cuestionario estudiantes_public.pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER Rendimiento por alumno, bases Web.pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER titulados Ed.Superior 2007 - 2024, WEB.pdf
-/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2021_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_PACE).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2021_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_REGULARES).pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2021_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_pace).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2021_PRIV_MRUN_(D_MATRICULA).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2022_MRUN(A_INSCRITOS_PUNTAJES).pdf
-/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2022_MRUN_(C_POSTULACION_SELECCION_CUPOS_PACE).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2022_MRUN_(C_POSTULACION_SELECCION_CUPOS_REGULARES).pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2022_MRUN_(C_POSTULACION_SELECCION_CUPOS_pace).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PDT_2022_MRUN_(D_MATRICULA).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2004_2018_PRIV_MRUN_(A_INSCRITOS_PUNTAJES).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2004_2019_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_REGULARES).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2004_2019_PRIV_MRUN_(D_MATRICULA).pdf
-/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2016_2019_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_PACE).pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2016_2019_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_pace).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2019_PRIV_MRUN_(A_INSCRITOS_PUNTAJES).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2020_PRIV_MRUN_(A_INSCRITOS_PUNTAJES).pdf
-/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2020_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_PACE).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2020_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_REGULARES).pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2020_PRIV_MRUN_(C_POSTULACION_SELECCION_CUPOS_pace).pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Alumnos_PSU_2020_PRIV_MRUN_(D_MATRICULA).pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Matrícula_Educación_Superior_2007_2018_PRIV_MRUN.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Matrícula_por_alumno_PUBL_MRUN_WEB.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/ER_Preferentes_Prioritarios_y_Beneficiarios_WEB.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/APPROVED ethics application 10515.002.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/APPROVED_data_protection_registration.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/Cuestionario estudiantes_public.pdf
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/information_sheet_sp.pdf
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/574_liceos_pace_codebook.md
-/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/archivo_E_PACE_2018_MRUN_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/archivo_E_pace_2018_MRUN_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/criterios_2018_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/cuestionario_jefe_2017_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/data_expvar_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/distance_and_geocoded_inputs_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/docentes_29-12_rp_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/experimental_school_list_and_pace221_ucl_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/four_cases_missing_in_final_mat2017_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/major_oecd_area_manual_classification_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/nem_percentiles_jovenes_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/notas_por_estudiante_y_subsector_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/sistema_de_acceso_sua_desde_2016_codebook.md
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/universidades_codebook.md
 /Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/data/codebooks/2017_02_08 Cuestionario Estudiantes Final (002).docx
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/Cuestionario_-_Docentes.docx
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/Cuestionario_-_Jefe.docx
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/carta DIRECTORES NO PACE.docx
+/Users/florianoswald/actions-runner/_work/JPE-Tincani-20230441/JPE-Tincani-20230441/replication-package/Replication_Tincani_Kosse_Miglino/supporting-material/carta DIRECTORES PACE.docx

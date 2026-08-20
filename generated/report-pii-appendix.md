@@ -1,6 +1,6 @@
 ## Appendix: Detailed PII Detection Results
 
-*Generated on 2026-07-17 16:08:37*
+*Generated on 2026-08-20 16:26:43*
 
 This appendix lists all detected instances of potential personally identifiable information (PII) in the project files. Each entry shows the matched PII terms and, for data files, sample values to help verify whether the flagged content is indeed sensitive.
 
@@ -8,19 +8,6 @@ This appendix lists all detected instances of potential personally identifiable 
 
 | File Type | File | Variables/References | PII Categories |
 |-----------|------|----------------------|----------------|
-| Data | `A_INSCRITOS_PUNTAJES_PSU_2018_PRIV_MRUN.csv` | 2 | sex, loc |
-| Data | `Cuestionario+-+Jefe_December+18%252C+2017_13.56_rp.dta` | 1 | son |
-| Data | `archivo_E_PACE_2018_MRUN.csv` | 2 | sex, loc |
-| Data | `basefinal_rp.dta` | 4 | sex, dob, son |
-| Data | `distance_pace_ucl.dta` | 1 | school |
-| Data | `enrollment_university_geocoded.csv` | 2 | lat, lon |
-| Data | `enrollment_university_geocoded.dta` | 2 | lat, lon |
-| Data | `high_school_geocoded.csv` | 4 | lat, school, lon |
-| Data | `high_school_geocoded.dta` | 4 | lat, school, lon |
-| Data | `ranking_applications_high_school_geocoded.csv` | 4 | lat, school, lon |
-| Data | `ranking_applications_high_school_geocoded.dta` | 4 | lat, school, lon |
-| Data | `ranking_applications_university_geocoded.csv` | 2 | lat, lon |
-| Data | `ranking_applications_university_geocoded.dta` | 2 | lat, lon |
 | Code | `0.Main.do` | 12 | son, loc, school |
 | Code | `00.setup.do` | 8 | loc, son |
 | Code | `01.run_1_8_data_construction.do` | 20 | loc, school, second, minute |
@@ -372,149 +359,6 @@ This appendix lists all detected instances of potential personally identifiable 
 | Code | `upsetplot.ado` | 57 | loc, name, degree, lon, second |
 | Code | `vennbar.ado` | 31 | loc, name, degree, lon |
 | Code | `waldtest.ado` | 6 | lat, lon, loc, name |
-
-### Data Files
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Admission/archivo_E_PACE_2018_MRUN.csv**
-
-- Variable: `localeduc`
-  - Matched terms: loc
-  - Sample values: 2989, 3422, 3596
-- Variable: `sexo`
-  - Matched terms: sex
-  - Sample values: 1, 2
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/August_survey/basefinal_rp.dta**
-
-- Variable: `P1` (label: *P1 Sexo*)
-  - Matched terms: sex
-  - Sample values: 1.0, 2.0
-- Variable: `P46` (label: *P46 Ahora, piensa en el estudiante con el sexto (6°) mejor promedio de Notas de*)
-  - Matched terms: sex
-  - Sample values: 6.2, 6.0, 5.0
-- Variable: `PP2` (label: *PP2 Un número aumentado en 7 unidades es igual al doble del mismo número. La ecu*)
-  - Matched terms: dob
-  - Sample values: 4.0, 3.0, 1.0
-- Variable: `PP8` (label: *PP8 Dada la siguiente ecuacion sus soluciones son:*)
-  - Matched terms: son
-  - Sample values: 3.0, 2.0, 4.0
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/distance_pace_ucl.dta**
-
-- Variable: `grupo_pace` (label: *School is in PACE, 0=No PACE, 1=PACE*)
-  - Matched terms: school
-  - Sample values: 0.0, 1.0
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/enrollment_university_geocoded.csv**
-
-- Variable: `latitude_university`
-  - Matched terms: lat
-  - Sample values: -35.4265343, -33.4288379, -33.6704044
-- Variable: `longitude_university`
-  - Matched terms: lon
-  - Sample values: -71.6660322, -70.6113373, -70.5856491
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/enrollment_university_geocoded.dta**
-
-- Variable: `latitude_university`
-  - Matched terms: lat
-  - Sample values: -35.4265343, -33.4288379, -33.6704044
-- Variable: `longitude_university`
-  - Matched terms: lon
-  - Sample values: -71.6660322, -70.6113373, -70.5856491
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/high_school_geocoded.csv**
-
-- Variable: `latitude_high_school`
-  - Matched terms: lat, school
-  - Sample values: -33.5428175, -36.6066616, -36.1414293
-- Variable: `longitude_high_school`
-  - Matched terms: lon, school
-  - Sample values: -70.643812, -72.1033194, -71.8222221
-- Variable: `region_high_school`
-  - Matched terms: school
-  - Sample values: Santiago Metropolitan Region, Nuble Region, Maule Region
-- Variable: `town_high_school`
-  - Matched terms: school
-  - Sample values: , Chillán, Parral
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/high_school_geocoded.dta**
-
-- Variable: `latitude_high_school`
-  - Matched terms: lat, school
-  - Sample values: -33.5428175, -36.6066616, -36.1414293
-- Variable: `longitude_high_school`
-  - Matched terms: lon, school
-  - Sample values: -70.643812, -72.1033194, -71.8222221
-- Variable: `region_high_school`
-  - Matched terms: school
-  - Sample values: Santiago Metropolitan Region, Nuble Region, Maule Region
-- Variable: `town_high_school`
-  - Matched terms: school
-  - Sample values: , Chillán, Parral
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/ranking_applications_high_school_geocoded.csv**
-
-- Variable: `latitude_high_school`
-  - Matched terms: lat, school
-  - Sample values: -18.4792205, -41.2675204, -36.6066616
-- Variable: `longitude_high_school`
-  - Matched terms: lon, school
-  - Sample values: -70.3214246, -72.9961481, -72.1033194
-- Variable: `region_high_school`
-  - Matched terms: school
-  - Sample values: Arica y Parinacota Region, Los Lagos Region, Nuble Region
-- Variable: `town_high_school`
-  - Matched terms: school
-  - Sample values: Arica, Llanquihue, Chillán
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/ranking_applications_high_school_geocoded.dta**
-
-- Variable: `latitude_high_school`
-  - Matched terms: lat, school
-  - Sample values: -18.4792205, -41.2675204, -36.6066616
-- Variable: `longitude_high_school`
-  - Matched terms: lon, school
-  - Sample values: -70.3214246, -72.9961481, -72.1033194
-- Variable: `region_high_school`
-  - Matched terms: school
-  - Sample values: Arica y Parinacota Region, Los Lagos Region, Nuble Region
-- Variable: `town_high_school`
-  - Matched terms: school
-  - Sample values: Arica, Llanquihue, Chillán
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/ranking_applications_university_geocoded.csv**
-
-- Variable: `latitude_university`
-  - Matched terms: lat
-  - Sample values: -33.03932, -33.4288379, -33.485462
-- Variable: `longitude_university`
-  - Matched terms: lon
-  - Sample values: -71.62725, -70.6113373, -70.6536155
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Distance_and_transfers_to_universities/ranking_applications_university_geocoded.dta**
-
-- Variable: `latitude_university`
-  - Matched terms: lat
-  - Sample values: -33.03932, -33.4288379, -33.485462
-- Variable: `longitude_university`
-  - Matched terms: lon
-  - Sample values: -71.62725, -70.6113373, -70.6536155
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/PSU/A_INSCRITOS_PUNTAJES_PSU_2018_PRIV_MRUN.csv**
-
-- Variable: `COD_SEXO`
-  - Matched terms: sex
-  - Sample values: 2, 1
-- Variable: `LOCAL_EDUCACIONAL`
-  - Matched terms: loc
-  - Sample values: 3271, 1499, 3380
-
-**/replication-package/Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Teachers_and_principals/Cuestionario+-+Jefe_December+18%252C+2017_13.56_rp.dta**
-
-- Variable: `Q16` (label: *Q16 Considere únicamente los estudiantes que actualmente son en cuarto medio. Se*)
-  - Matched terms: son
-  - Sample values: 1.0, 2.0
 
 ### Code Files
 

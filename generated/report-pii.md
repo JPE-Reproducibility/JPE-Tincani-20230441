@@ -4,8 +4,8 @@
 
 **Summary:**
 
-- Data files with PII indicators: 13
-- Variables flagged in data: 34
+- Data files with PII indicators: 0
+- Variables flagged in data: 0
 - Code files with PII references: 351
 - PII references in code: 32406
 
@@ -13,19 +13,6 @@
 
 | File Type | File | Variables/References | PII Categories |
 |-----------|------|----------------------|----------------|
-| Data | `A_INSCRITOS_PUNTAJES_PSU_2018_PRIV_MRUN.csv` | 2 | sex, loc |
-| Data | `Cuestionario+-+Jefe_December+18%252C+2017_13.56_rp.dta` | 1 | son |
-| Data | `archivo_E_PACE_2018_MRUN.csv` | 2 | sex, loc |
-| Data | `basefinal_rp.dta` | 4 | sex, dob, son |
-| Data | `distance_pace_ucl.dta` | 1 | school |
-| Data | `enrollment_university_geocoded.csv` | 2 | lat, lon |
-| Data | `enrollment_university_geocoded.dta` | 2 | lat, lon |
-| Data | `high_school_geocoded.csv` | 4 | lat, school, lon |
-| Data | `high_school_geocoded.dta` | 4 | lat, school, lon |
-| Data | `ranking_applications_high_school_geocoded.csv` | 4 | lat, school, lon |
-| Data | `ranking_applications_high_school_geocoded.dta` | 4 | lat, school, lon |
-| Data | `ranking_applications_university_geocoded.csv` | 2 | lat, lon |
-| Data | `ranking_applications_university_geocoded.dta` | 2 | lat, lon |
 | Code | `0.Main.do` | 12 | son, loc, school |
 | Code | `00.setup.do` | 8 | loc, son |
 | Code | `01.run_1_8_data_construction.do` | 20 | loc, school, second, minute |
@@ -33,5 +20,18 @@
 | Code | `1.Clean_GPA.do` | 96 | school, name, loc, lon, lat |
 | Code | `10.Figures.do` | 133 | lat, school, loc, degree, social, lon, name, location |
 | Code | `11.Data_for_model_estimation_rescale.do` | 136 | school, name, loc, lat, degree, location, lon |
+| Code | `12.Empirical_coefficients_rescale.do` | 115 | name, loc |
+| Code | `13.Create_bootstrap.do` | 134 | son, loc, school, name, lat |
+| Code | `14.Estimation_rescale_fast_adjw_20shocks.jl` | 16 | lat, school, son, loc |
+| Code | `15.Simulations_rescale.jl` | 80 | lon, lat, school, son |
+| Code | `16.Simulations_rescale_CC.jl` | 82 | lon, lat, school, son |
+| Code | `17.Simulations_RE_and_PACE.jl` | 125 | school, lat, son, lon |
+| Code | `18.Simulations_effpers_and_PACE_revision2round_baseline.jl` | 85 | lat, lon, school, son |
+| Code | `19.Calculate_bias_RE_cutoff.do` | 7 | lat, son, loc, name |
+| Code | `2.Clean_simce.do` | 62 | father, house, name, gender, school, lon, mother, loc, child, second |
+| Code | `20.Simulations_top5.jl` | 195 | school, lat, son, lon, lname, name |
+| Code | `21.Simulations_top10.jl` | 195 | school, lat, son, lon, lname, name |
+| Code | `22.Simulations_top15.jl` | 195 | school, lat, son, lon, lname, name |
+| Code | `23.Simulations_top20.jl` | 195 | school, lat, son, lon, lname, name |
 
 *See [Appendix](report-pii-appendix.md) for detailed listing of all flagged instances.*

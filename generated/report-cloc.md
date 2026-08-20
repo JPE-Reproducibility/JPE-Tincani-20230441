@@ -1,14 +1,14 @@
-cloc|github.com/AlDanial/cloc v 2.06  T=5.02 s (115.2 files/s, 927400.1 lines/s)
+cloc|github.com/AlDanial/cloc v 2.06  T=0.60 s (808.0 files/s, 464976.2 lines/s)
 --- | ---
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-CSV|101|0|0|4372965
 Stata|362|30473|15585|179932
 Julia|68|10119|6581|28374
 TeX|35|1399|53|3332
 TOML|4|387|2|1694
+Markdown|14|167|0|459
 Python|1|64|19|336
-Markdown|7|86|0|292
+CSV|1|0|0|118
 --------|--------|--------|--------|--------
-SUM:|578|42528|22240|4586925
+SUM:|485|42609|22240|214245

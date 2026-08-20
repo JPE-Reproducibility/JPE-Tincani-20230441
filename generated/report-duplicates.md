@@ -15,4 +15,4 @@ We found the following duplicate files:
 | /Replication_Tincani_Kosse_Miglino/code/stata/ado_frozen/plus/g/gtoplevelsof.sthlp | 0.02 | 6bacec2ea5653d08173d90bf6e1d7cf84a122f09 |
 | /Replication_Tincani_Kosse_Miglino/code/stata/ado_frozen/plus/g/gquantiles.sthlp | 0.02 | 0c6e67ae057265e1c4ee74a78e16ae068a72de2d |
 | /Replication_Tincani_Kosse_Miglino/code/julia/bootstrap/Criterion_Function_rescale_fast_adjw.jl | 0.02 | 323a50c650d44ec4eb6bfa5bf7e0ef8e203b10d5 |
-| /Replication_Tincani_Kosse_Miglino/confidential-data-not-for-publication/raw/Postulantes Cupos Regulares/PACEcriterios_mrun_2018.csv | 0.88 | cd4a0e6b4aa5a77b63a56cebbc724552c56c4ecd |
+| /Replication_Tincani_Kosse_Miglino/supporting-material/Cuestionario estudiantes_public.pdf | 0.18 | 0dd0a3f988b3cf4fd6b6dbe67a78831522d7ba0a |
