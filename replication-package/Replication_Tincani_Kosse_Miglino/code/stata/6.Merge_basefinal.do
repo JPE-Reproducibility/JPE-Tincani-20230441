@@ -4,11 +4,11 @@
 ********************************************************************************
 
 ***Generate matricula 2016 dataset
-import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.CSV", clear
+import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.csv", clear
 saveold "$dataTemp/matricula_unica_2016.dta", replace
 
 ***Add variable for school in 2017 to check movement across schools 
-import delimited "$dataRawPublic/High_school_registration/20170921_Matricula_unica_2017_20170430_PUBL.CSV", clear 
+import delimited "$dataRawPublic/High_school_registration/20170921_Matricula_unica_2017_20170430_PUBL.csv", clear 
 append using "$dataRaw/High_school_registration/four_cases_missing_in_final_mat2017.dta"
 gen rbd_matricula2017=rbd
 keep mrun rbd_matricula2017 

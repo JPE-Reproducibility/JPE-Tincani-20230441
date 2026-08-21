@@ -58,7 +58,7 @@ program Reload
 	* Internal debugging tool.
 	* Updates dependencies and reghdfe from local path or from github
 	* Usage:
-	* 	reghdfe, update // from c:\git\..
+	* 	reghdfe, update // from c:/git/..
 	* 	reghdfe, reload // from github
 
 	args online
@@ -70,7 +70,7 @@ program Reload
 	* -ftools- https://github.com/sergiocorreia/ftools/
 	cap ado uninstall ftools
 	if (`online') net install ftools, from("https://github.com/sergiocorreia/ftools/raw/master/src/")
-	if (!`online') net install ftools, from("c:\git\ftools\src")
+	if (!`online') net install ftools, from("c:/git/ftools/src")
 	di as text "{hline 64}"
 	ftools, compile
 	di as text "{hline 64}"
@@ -80,7 +80,7 @@ program Reload
 	di as text "{hline 64}"
 	qui ado uninstall reghdfe
 	if (`online') net install reghdfe, from("https://github.com/sergiocorreia/reghdfe/raw/master/src/")
-	if (!`online') net install reghdfe, from("c:\git\reghdfe\src")
+	if (!`online') net install reghdfe, from("c:/git/reghdfe/src")
 	qui which reghdfe
 	di as text "{hline 64}"
 	reghdfe, compile

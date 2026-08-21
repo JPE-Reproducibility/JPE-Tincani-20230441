@@ -99,7 +99,7 @@ rarely used{p_end}
 {synopt :{opt check}}compile {it:lreghdfe.mlib} if it does not exist or if it needs to be updated;
 use {cmd:reghdfe,compile} to force an update{p_end}
 {synopt :{opt update}}update reghdfe and dependencies from the respective Github repositories;
-use {cmd:reghdfe,reload} to do so from {it:c:\git\*}{p_end}
+use {cmd:reghdfe,reload} to do so from {it:c:/git/*}{p_end}
 {synoptline}
 {p2colreset}{...}
 {p 4 6 2}* either {opt a:bsorb(absvars)} or {opt noa:bsorb} is required.{p_end}

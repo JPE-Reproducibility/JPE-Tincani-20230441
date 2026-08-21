@@ -2375,7 +2375,14 @@ bysort rbd_basefinal let_cur: egen mean_class_simce=mean(simce_avg_st)
 gen MT_teacher_hours=MT_hours_teach_outside+MT_hours_teach_prep
 gen LT_teacher_hours=LT_hours_teach_outside+LT_hours_teach_prep
 rename LT_language_prog_focus LT_lang_prog_focus
-
+* Teacher variables are constant within classroom but missing for some students.
+  * Fill them with the classroom value so results do not depend on which row
+  * bysort picks as class_index==1 (sort tie-breaks differ across Stata setups).
+  foreach var in MT_teacher_hours LT_teacher_hours MT_days_miss_class LT_days_miss_class MT_math_prog_focus LT_lang_prog_focus {
+      bysort rbd_basefinal let_cur: egen double __fill=min(`var')
+      replace `var'=__fill
+      drop __fill
+  }
 qui do "$do_files/9.fdr_sharpened_qvalues_adj.do" 
 fdr_sharpened_qvalues_adj {regress MT_teacher_hours treatment  if class_index==1, vce(cluster rbd_basefinal)} {regress LT_teacher_hours treatment  if class_index==1, vce(cluster rbd_basefinal)} {regress MT_days_miss_class treatment  if class_index==1, vce(cluster rbd_basefinal)} {regress LT_days_miss_class treatment  if class_index==1, vce(cluster rbd_basefinal)} {regress MT_math_prog_focus treatment  if class_index==1, vce(cluster rbd_basefinal)} {regress LT_lang_prog_focus treatment  if class_index==1, vce(cluster rbd_basefinal)}  // put treatment variable immediately after dependent variable in each regression
 foreach var in MT_teacher_hours LT_teacher_hours MT_days_miss_class LT_days_miss_class MT_math_prog_focus LT_lang_prog_focus {

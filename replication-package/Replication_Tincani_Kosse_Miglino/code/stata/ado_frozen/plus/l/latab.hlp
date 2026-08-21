@@ -71,7 +71,7 @@ in your filenames, these will also need to be removed.
 
 For example: 
 
-\footnotesize{\emph{Source:} d:\mymain\mydirectory\my_data.dta}
+\footnotesize{\emph{Source:} d:/mymain/mydirectory/my_data.dta}
 
 would need to be edited to become:
 

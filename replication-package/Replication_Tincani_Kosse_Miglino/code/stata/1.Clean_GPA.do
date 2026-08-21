@@ -486,7 +486,7 @@ save  "$dataTemp/GPAallyears_rank.dta"  , replace
 ***       Generate rank in school based on GPA in primero and segundo medio  ***
 ********************************************************************************
 ***Generate matricula 2016 dataset
-import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.CSV", clear
+import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.csv", clear
 saveold "$dataTemp/matricula_unica_2016.dta", replace
 
 

@@ -421,6 +421,7 @@ save "$dataTemp/data_enrollment_distance_selectivity.dta", replace
 
 * Compute distance between high schools and universities to which students applied
 foreach k in PACE regular {
+	local k_file = lower("`k'")
 use "$dataTemp/ranking_applications_`k'.dta", replace
 merge m:1 sede_carrera sigla_universidad using "$dataRaw/Distance_and_transfers_to_universities/ranking_applications_university_geocoded.dta"
 drop if _merge==2
@@ -559,7 +560,7 @@ lab var oecd_area_admitted "Study field area of degree program admitted"
 lab var STEM_last "Last degree program in application list is STEM"
 lab var distance_last "Distance to last degree program in application list"
 lab var mean_PSU_score_last  "Selectivity of last degree program in application list"
-save "$dataTemp/ranking_selected_applications_`k'.dta", replace
+save "$dataTemp/ranking_selected_applications_`k_file'.dta", replace
 }
 
 use "$dataTemp/ranking_selected_applications_regular.dta", clear

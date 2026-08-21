@@ -230,7 +230,7 @@ We obtain from the survey both the expected GPA in high school, $\overline{GPA}_
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.65\linewidth]{Revision/Figures R/returns_effort_PSUGPA_raw_answers_comb.png}
+    \includegraphics[width=0.65\linewidth]{output/figures/returns_effort_PSUGPA_raw_answers_comb.png}
     \vspace{-0.5cm}
     \caption{\label{fig:returnseffortPSUGPAdataraw} Distribution of answers to survey questions on perceived returns to effort. The reported perceived top 15 cutoff is on average 5.85 in the sample used to construct these histograms. The survey questions are reported in the last row of Table \ref{tab:beliefelicitation}. The sample sizes for the left-side graph are: 5,344 for X=350, 5,442 for X=450, 5,469 for X=600. The sample sizes for the right-side graph are: 5,451 for X=5.5, 5,443 for X=reported perceived top 15 cutoff. }
     \label{fig:PSUGPAreturnsrawanswers}
@@ -282,7 +282,6 @@ The identification problem for persistence is analogous. Persistence is observed
 
 \paragraph{Unobserved heterogeneity.} We adopt a finite-mixture approach to model unobserved heterogeneity and assume two unobserved types ($K=2$). The robustness analysis in Appendix \ref{sec: appendix3types} shows that increasing the number of types does not substantially improve the model's ability to match the data, as only 4\% of students are estimated to belong to a third type. Type probabilities follow a logit specification that depends on vector $Z_i$, consisting of gender, an indicator for whether the student at baseline was in the top 15\% of the school based on GPA in grades 9-10, and an indicator for whether the student was surveyed in our data collection, to allow for survey attrition based on unobservables. By virtue of the randomization, type probabilities do not depend on treatment status.\par 
 The variables in $Z_i$ are not added as direct determinants in the effort, PSU, GPA, enrollment, or persistence equations. Instead, they affect choices and outcomes only by shifting the probability of belonging to each latent type. Conditional on the other model initial conditions, we assume that gender, survey status, and baseline top-15 status affect choices and outcomes only through this type distribution. The auxiliary moments use this variation in two ways. Gender and survey status enter selected auxiliary regressions as regressors, so their coefficients summarize heterogeneity associated with these type-probability shifters. Baseline top-15 status is not used as a regressor; instead, we estimate key auxiliary moments separately in the full sample and in the baseline top-15 subsample, so differences across these samples summarize heterogeneity by baseline rank. These regression coefficients and sample-split moments discipline the type probabilities and type-specific parameters. Appendix \ref{sec:remaining_II_param} and Appendix \ref{sec:moments} list the corresponding auxiliary moments.\par
-
 
 
 

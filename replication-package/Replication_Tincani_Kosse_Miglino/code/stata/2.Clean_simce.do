@@ -389,7 +389,7 @@ saveold simce2012_alucpad_clean, replace
 **#  Clean simce datasets to have simce datsets with unique identifier mrun. Old do-file: "simce_unique_mrun_alucpad.do"
 ********************************************************************************** 
 ***Generate matricula 2016 dataset
-import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.CSV", clear
+import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.csv", clear
 saveold "$dataTemp/matricula_unica_2016.dta", replace
 
 
@@ -413,7 +413,7 @@ saveold "$dataTemp/simce_unique_alucpad_2015.dta", replace
 
 *----------------------------------2014-----------------------------------------
  *Save Matricula 2014 dataset in dta format
-import delimited "$dataRawPublic/High_school_registration/20140924_Matricula_unica_2014_20140430_PUBL.CSV", clear 
+import delimited "$dataRawPublic/High_school_registration/20140924_Matricula_unica_2014_20140430_PUBL.csv", clear 
 rename let_cur letra_curso
 keep mrun gen_alu rbd letra_curso 
 saveold "$dataTemp/Matricula_unica_2014_formerge.dta", replace /*temporary file to eliminate the wrong duplicates*/
@@ -454,7 +454,7 @@ capture erase "$dataTemp/simce_correctduplicates_2014.dta"
 
 *----------------------------------2013-----------------------------------------
 *Save Matricula 2013 dataset in dta format
-import delimited "$dataRawPublic/High_school_registration/20140808_matricula_unica_2013_20130430_PUBL.CSV", clear 
+import delimited "$dataRawPublic/High_school_registration/20140808_matricula_unica_2013_20130430_PUBL.csv", clear 
 rename let_cur letra_curso
 keep mrun gen_alu rbd letra_curso 
 saveold "$dataTemp/Matricula_2013_formerge.dta", replace /*temporary file to eliminate the wrong duplicates*/
@@ -494,7 +494,7 @@ capture erase "$dataTemp/simce_correctduplicates_2013.dta"
 
 *----------------------------------2012-----------------------------------------
 *Save Matricula 2012 dataset in dta format
-import delimited  "$dataRawPublic/High_school_registration/20140812_matricula_unica_2012_20120430_PUBL.CSV", clear
+import delimited  "$dataRawPublic/High_school_registration/20140812_matricula_unica_2012_20120430_PUBL.csv", clear
 rename let_cur letra_curso
 keep mrun gen_alu rbd letra_curso 
 saveold "$dataTemp/Matricula_2012_formerge.dta", replace /*temporary file to eliminate the wrong duplicates*/

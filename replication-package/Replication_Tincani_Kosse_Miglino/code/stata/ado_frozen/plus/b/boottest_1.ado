@@ -181,7 +181,7 @@ program define _boottest, rclass sortpreserve
     else {
       python: import sys; nthreads = psutil.cpu_count(logical=False) if 'psutil' in sys.modules else 1  // try to set # of Julia threads to # of physical cores
     }
-    local pyline from julia import Julia; jl=Julia(/*sysimage=r"C:\Users\drood\ado\plus\b\wbt.so",*/ threads=nthreads); from julia import Main, Random, Pkg
+    local pyline from julia import Julia; jl=Julia(/*sysimage=r"C:/Users/drood/ado/plus/b/wbt.so",*/ threads=nthreads); from julia import Main, Random, Pkg
     cap python: `pyline'
     if _rc {
       cap python: julia.install(color=False); `pyline'
@@ -198,7 +198,7 @@ program define _boottest, rclass sortpreserve
       di as err `"Follow {browse "https://julialang.org/downloads/platform":these instructions} for installing it and adding it to the system path."'
       exit 198
     }
-// python:Main.eval('pushfirst!(LOAD_PATH,raw"D:\OneDrive\Documents\Macros\WildBootTests.jl")')
+// python:Main.eval('pushfirst!(LOAD_PATH,raw"D:/OneDrive/Documents/Macros/WildBootTests.jl")')
     qui python: Main.eval('using Pkg; p=[v for v in values(Pkg.dependencies()) if v.name=="WildBootTests"]')
     python: Macro.setLocal("rc", str(Main.eval('length(p)')))
     if `rc'==0 {

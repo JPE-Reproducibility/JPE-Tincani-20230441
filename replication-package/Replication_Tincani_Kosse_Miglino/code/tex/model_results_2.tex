@@ -16,7 +16,7 @@ Pre-college study effort has a positive causal effect on selective college persi
 
 
 
-\input{Revision/Tables R/causal_correlational_returns_eff_pers}
+\input{output/tables/causal_correlational_returns_eff_pers}
 
 The estimated causal returns to effort suggest that the observed effort decline---approximately 0.20 study hours per week--- can explain only a small share of the approximately 2-percentage-point lower persistence rate among college entrants from treated schools (Section \ref{sec: findings}). One fewer hour of study per week decreases the persistence likelihood by 1 p.p., while belonging to type 2 lowers it by 3.5 p.p. The majority of the gap, therefore, seems to be driven by selection on unobservables. In fact, the model indicates that the share of type 2 students (those least likely to persist) is 17 p.p. higher among college entrants from treated schools. 
 
@@ -29,7 +29,7 @@ The structural model achieves a good fit. Table \ref{tab:descriptionoutcomes} co
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Revision/Figures R/TE_over_time_enrolled_SUA.png}
+	\includegraphics[width=0.8\linewidth]{output/figures/TE_over_time_enrolled_SUA.png}
 	\vspace{-0.5cm}
 	\caption{\label{fig:TEovertimefit} Model fit---\textit{targeted} moments. Effects of PACE on admissions, enrollments and persistence. The left panel shows results for the sample of all students in the experiment. The right panel shows results for the sample of all students who at the end of $10^{th}$ grade, before the experiment started, were in the top $15\%$ of their school according to GPA in the first two high school years. The bars represent treatment effects calculated using the actual data, with 95\% confidence intervals reported. The triangles represent treatment effects calculated using the data simulated from the estimated structural model. The outcomes are constructed as in the main analysis in section \ref{sec: findings}.  } 
 \end{figure}
@@ -39,7 +39,7 @@ The model successfully replicates the targeted treatment effects of interest. Th
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.6\linewidth]{Revision/Figures R/TE_effort_byrank_fe_model1.png}
+	\includegraphics[width=0.6\linewidth]{output/figures/TE_effort_byrank_fe_model1.png}
 	\vspace{-0.5cm}
 	\caption{\label{fig:TEachbyability5} Model fit---\textit{untargeted} moments. Heterogeneity of the effects of PACE on pre-college study effort by quintile of the GPA ranking in the first two high school years. The graphs plot, for each quintile, the estimated coefficients on treatment of an OLS regression where the outcome variable is hours of study per week and the standard set of controls is included. We use Inverse Probability Weights in both regressions. Regressions on actual data also include fieldworker fixed effects. } 
 \end{figure}
@@ -48,7 +48,7 @@ The model also broadly captures treatment effects on pre-college outcomes and th
 
 
 
-\input{Revision/Tables R/TE_pre_college_outcomes_model_fit} 
+\input{output/tables/TE_pre_college_outcomes_model_fit} 
 
 
 
@@ -70,7 +70,7 @@ This first counterfactual is diagnostic: it removes all belief errors at once to
 
 \vspace{-1em}
 \paragraph{Results.} Table \ref{tab:ATERE} compares the baseline simulated effect of PACE under estimated beliefs with the effect of PACE when students hold rational expectations. In a RE world, PACE would not have caused the observed reduction in effort, on average  (row 1, column 2). By contrast, under estimated beliefs, the model reproduces the finding of an effort reduction (row 1, column 1). On one hand, under RE, PACE would have slightly raised the marginal returns to effort in admission at all effort levels---by less than one percentage point per additional weekly study hour (Appendix Figure \ref{fig:reteffRE}). On the other hand, students under RE would have valued admission less, expecting much lower persistence chances than under the belief errors we documented. As a result, under RE, PACE would not have affected pre-college effort on average and would have had smaller enrollment impacts due to lower take-up rates (row 4). This suggests that students' belief errors shaped the observed effort reductions in response to PACE, but also potentially boosted take up.\footnote{Additionally, under rational expectations, students would have exerted substantially less effort, regardless of PACE.  The second column of Table \ref{tab:ATEinfocount} shows the average effects of assigning rational expectations to students in the control group. Compared to the rational expectations scenario, students exert substantially greater pre-college effort and are more likely to take the entrance exam when they hold over-optimistic beliefs about the returns to effort in securing a regular admission and the likelihood of persisting in selective colleges  (first two rows). Therefore, it is an empirical question whether pairing PACE with belief-correcting interventions would avoid pre-college effort reductions, thus fostering persistence, or have opposite effects through discouragement. }\par 
-\input{Revision/Tables R/simulated_ATEs_RE}
+\input{output/tables/simulated_ATEs_RE}
 
 
 
@@ -101,7 +101,7 @@ $$0\leq \bigg(pgrad^b_i-\frac{\partial Pr(Persist_i=1) }{\partial d_{i1}}\cdot d
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Revision/Figures R/TE_over_time_enrolled_SUA_count.png}
+	\includegraphics[width=0.8\linewidth]{output/figures/TE_over_time_enrolled_SUA_count.png}
 	%\vspace{-0.4cm}
     \vspace{-0.5cm}
   %  \captionsetup{skip=-0.4\baselineskip}
@@ -111,7 +111,7 @@ $$0\leq \bigg(pgrad^b_i-\frac{\partial Pr(Persist_i=1) }{\partial d_{i1}}\cdot d
 Column 4 of Table \ref{tab:ATEinfocount} shows why targeting this particular bias matters. Correcting only beliefs about the return to effort in persistence avoids most of the pre-college effort reduction, while leaving the program's effects on admissions, enrollment, and fifth-year enrollment essentially unchanged, as also shown in Figure \ref{fig:TEovertimecount1}. Unlike full belief correction, this intervention does not reduce take-up by lowering students' perceived level of college persistence, nor does it generate heterogeneous reductions in entrance-exam-taking among lower-achieving students (Appendix Figure \ref{fig:effects_info_by_simce}). \par
 
 
-\input{Revision/Tables R/simulated_ATEs}
+\input{output/tables/simulated_ATEs}
 
 Finally, we show in Appendix \ref{sec:app_add_mod2} that, for all the policy designs we consider, policy impacts on pre-college effort affect policy impacts on persistence through two channels: by changing the composition of students who enter college, and by altering the extent of their preparation during high school.\par 
 
@@ -148,7 +148,7 @@ We then solve the model under these counterfactual beliefs and simulate choices 
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.8\linewidth]{Revision/Figures R/Counterfactual_multiple_cutoffs_avg_individual_TE.png}
+    \includegraphics[width=0.8\linewidth]{output/figures/Counterfactual_multiple_cutoffs_avg_individual_TE.png}
  % \usepackage{caption}
  \vspace{-0.5cm}
 %\captionsetup{skip=-0.4\baselineskip}
@@ -162,7 +162,6 @@ the control group in the data, we simulate a control condition in which no inter
 
 \vspace{-1em}
 \paragraph{Results.} Figure \ref{fig:ATEmcutoffcount} shows that more generous cutoffs lead to more students being admitted and persisting in selective college. However, they also lead to an increase in the number of students who enroll but subsequently drop out. Under the top 5\%, 10\% and 15\% cutoff rules, the increase in enrollment followed by persistence exceeds the increase in enrollment followed by dropout. But beyond the 15\% threshold, this pattern reverses. These differential effects reflect a shift in the composition of selective college entrants: as the program becomes more generous, it admits students with lower baseline test scores and weaker pre-college effort, reducing the average likelihood of persistence (Figure \ref{fig:collegeentrantsmcutoffs}).  \par 
-
 
 
 

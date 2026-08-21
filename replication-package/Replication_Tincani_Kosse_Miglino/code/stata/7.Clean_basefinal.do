@@ -1461,10 +1461,10 @@ save "$dataClean/data_population_PSU_students.dta", replace // save data on popu
 ***                    Generate data on school transitions                   ***
 ********************************************************************************
 
-import delimited "$dataRawPublic/High_school_registration/20150923_Matricula_unica_2015_20150430_PUBL.CSV", delimiter(";") clear
+import delimited "$dataRawPublic/High_school_registration/20150923_Matricula_unica_2015_20150430_PUBL.csv", delimiter(";") clear
 save "$dataTemp/2015.dta", replace
 
-import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_Unica_2016_20160430_PUBL.CSV", delimiter(";") clear
+import delimited "$dataRawPublic/High_school_registration/20160926_Matricula_unica_2016_20160430_PUBL.csv", delimiter(";") clear
 save "$dataTemp/2016.dta", replace
 
 forvalues y = 2015(1)2016 {

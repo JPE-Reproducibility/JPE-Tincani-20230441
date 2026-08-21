@@ -107,7 +107,7 @@ PSU_i^b-\beta_{actual,i}^{Pb}e_i^{o}&=&\overline{PSU}_i^b-\beta_{actual,i}^{Pb}e
 \end{equation}
 
 
-\input{Revision/Tables R/params_outside_model_PSUbGPAb}
+\input{output/tables/params_outside_model_PSUbGPAb}
 
 Figure \ref{fig:GPAbPSUbfit} shows how the predicted perceived outcomes ($\widehat{\overline{PSU}^b_i},\widehat{\overline{GPA}}^{(11-12,b)}_{i}$) compare to the perceived outcomes reported in the survey ($\overline{PSU}^b_i,\overline{GPA}^{(11-12,b)}_{i}$). To mitigate the influence of measurement error in effort (which affects $e_i^o$ in equations \eqref{eq:predPSUb} and \eqref{eq:predGPAb}) on the predicted outcomes, we average both predicted and actual outcomes conditional on the SIMCE test score and GPA from grades 9 and 10. Averaging across students helps isolate the model's goodness of fit from noise due to measurement error. As seen in the figure, the fit is excellent in regions with non-negligible student density.
 
@@ -117,7 +117,7 @@ Figure \ref{fig:GPAbPSUbfit} shows how the predicted perceived outcomes ($\wideh
 	\centering
 
 	\centering %[width=\linewidth]
-	\includegraphics[scale=0.25]{Revision/Figures R/PSUbGPAb_belief_GoF_nolasso.png}
+	\includegraphics[scale=0.25]{output/figures/PSUbGPAb_belief_GoF_nolasso.png}
 	\caption{\label{fig:GPAbPSUbfit} \scriptsize Goodness of fit of perceived PSU and GPA production functions at exerted effort levels. This figure shows the fit of the perceived production functions for PSU and GPA from equations \eqref{eq:PSUb} and  \eqref{eq:GPAb}. Predicted outcomes are constructed as in equations \eqref{eq:predPSUb} and \eqref{eq:predGPAb}. Actual outcomes are obtained from the survey.  }
 \end{figure}
 
@@ -150,4 +150,4 @@ These parameters cannot be estimated via Probit models of admissions without sol
 
 
 
-\input{Revision/auxiliary_parameters.tex}
+\input{auxiliary_parameters.tex}

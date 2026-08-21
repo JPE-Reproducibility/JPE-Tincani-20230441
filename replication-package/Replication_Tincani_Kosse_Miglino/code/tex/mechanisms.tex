@@ -60,7 +60,7 @@ Preferential admissions introduce new admission requirements based on pre-colleg
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Revision/Figures R/heterog_effects_effort_score.png}
+	\includegraphics[width=0.85\linewidth]{output/figures/heterog_effects_effort_score.png}
 	\vspace{-0.5cm}
 	\caption{\label{fig:hetero_all} Heterogeneity of policy effects on pre-college effort and achievement. Notes: Each dot is the coefficient on {\itshape Treatment} from an OLS regression where: {\itshape Treatment} is a dummy variable indicating whether a student is in a school that was randomly assigned to be in the PACE program, the controls are the standard set of controls (see Figure \ref{fig:TEovertime}), Inverse Probability Weights and field-worker fixed effects are used, the estimation samples are quintiles in the within-school rank based on $9^{th}$ and $10^{th}$ grade GPA (left panel) and quintiles in the distribution of $10^{th}$ grade standardized test scores (right panel). The units of measurement of the treatment effects are standard deviations. The bars are $95\%$ confidence intervals built using standard errors clustered at the school level. Q-values for the family of quintiles in the upper left panel are $q(Q1)= 0.001$, $q(Q2)= 0.161$, $q(Q3)= 0.329$, $q(Q4)= 0.700$, $q(Q5)= 0.415$. The respective q-values for the upper right panel are $0.087, 0.412, 0.213, 0.412, 0.087$. The respective q-values for the lower left panel are $0.640, 0.875, 0.952, 0.105, 1.000$. The respective q-values for the lower right panel are $0.172, 0.172, 0.225, 0.345, 0.048$.}
 	%\end{minipage}
@@ -91,7 +91,7 @@ A potential reason for not finding effects expected under rational expectations 
  We elicited subjective expectations over own GPA and the top 15\% cutoff in the school using the survey questions reported in the second and third rows of Table \ref{tab:beliefelicitation}. Students display large over-optimism about their within-school rank, with over $40\%$ believing that their GPA is in the top $15\%$. While students hold accurate beliefs about their own GPA (GPA is measured on a scale from 1 to 7 and on average the GPA students expect differs from the one they obtain by less than 0.1 GPA points), they have a belief bias about the $85^{th}$ GPA percentile in their school of less than half GPA point (fourth row of the Table). This small belief bias in absolute terms is large in relative terms because of strong grade compression, that we document in Figures \ref{fig:GPA_hist} and \ref{fig:discrimination}.\footnote{First, we show that while grades can range from 1 to 7, the vast majority lie between 5 and 6.5. Second, we link grade data to baseline and end-line standardized achievement measures, and show that grades do not discriminate substantially among students of different baseline abilities, and much less than the end-line standardized achievement test we administered does.} These belief biases are consistent with the limited college experience of students' parents (over 90\% did not study beyond secondary education) and the lack of relative rank feedback in PACE schools.\par 
 
 \par 
-\input{Revision/Tables R/summary_beliefs}
+\input{output/tables/summary_beliefs}
 \par 
 
 Examining belief heterogeneity, Figure \ref{fig:hetero_beliefs} shows that students of all (absolute and relative) ability levels are over-optimistic; Table \ref{tab:correlatesbelieferrors} shows that belief biases are only weakly related to socioeconomic background in our homogeneously disadvantaged sample, with small correlations with parental education. The findings align with existing evidence that over-optimism is widespread in many contexts, including education (\citealp{stinebrickner2014major,hakimov2025confidence}).\par 
@@ -102,7 +102,7 @@ The belief patterns shown in Table \ref{tab:summarybeliefs} and Figure \ref{fig:
 To further explore this channel, we examine the heterogeneity of impacts on pre-college outcomes by perceived absolute and relative ability. If students respond to perceived incentives, the marginal utility of effort is highest at the perceived top 15\% cutoff, as a small change in GPA can determine whether a student is in or out of the top 15\% and thus eligible for a preferential admission. The incentive to exert effort decreases as students perceive themselves to be further from this cutoff, leading to smaller treatment effects, even negative for those who perceive themselves to be well above the cutoff. Moreover, the negative impacts on effort should be strongest among students who are not confident of gaining regular admission, and believe they are above the top 15\% cutoff. \par
 
 
-\input{Revision/Tables R/TE_pre_college_outcomes_perceived_dist_cutoff_f}
+\input{output/tables/TE_pre_college_outcomes_perceived_dist_cutoff_f}
 
 This is what we find, as shown in Table \ref{TEprecollegeoutcomesperceiveddistcutoff}. We define the perceived distance from the cutoff as the absolute value of the difference between a student's perceived own GPA and the perceived GPA of the $85^{th} $ percentile in their school. 
 We regress pre-college outcomes on the treatment indicator, the controls, the measure of perceived distance from the cutoff, and its interaction with both the treatment indicator and controls. 
@@ -123,7 +123,7 @@ We elicited students' beliefs about their likelihood of graduating from a select
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.65\linewidth]{Revision/Figures R/histogram_p_graduate_T_C.png}
+	\includegraphics[width=0.65\linewidth]{output/figures/histogram_p_graduate_T_C.png}
 	\vspace{-0.5cm}
 	\caption{\label{fig:p_grad_effect} Distribution of survey responses regarding beliefs about the likelihood of graduating from a selective college conditional on enrolling, by treatment status (i.e., being in a PACE or control school). The figure includes $95\%$ confidence intervals for the difference between the proportion of treated and of control students giving each answer. The confidence intervals were obtained from standard errors clustered at high school level. An English translation of the survey question can be found in Appendix Table \ref{tab:beliefelicitation}.}
 	%\end{minipage}
@@ -135,7 +135,6 @@ We elicited students' beliefs about their likelihood of graduating from a select
 Teachers can influence who obtains a preferential seat by adjusting their grading. If, in response to the percent plan policy, teachers manipulate their grading in ways that weaken the link between academic achievement and GPA, students in treated schools may have weaker incentives to study. This could help explain the observed reductions in pre-college effort. Teachers may also respond to the policy by changing their own effort or shifting the focus of instruction, which could affect student achievement both directly and indirectly—if, for instance, changes in teacher behavior influence how much students study. Schools might also adjust their academic support offerings, particularly for entrance exam preparation. However, evidence from supplementary teacher and principal surveys, along with merged data on grades and standardized test scores, suggests that these channels are unlikely to drive the decline in pre-college effort (Appendix \ref{sec:grading}).\par 
 
     If the light-touch orientation classes offered in PACE schools negatively affected students' beliefs about the net returns to college, they could have generated the reduction in pre-college study effort. \citealp{hastings2015effects} show that providing information on graduate earnings can change college applicants' choices in Chile. Although the orientation classes were not designed to provide information about returns, this remains an important channel to consider.\footnote{Perceived returns to college is an outcome that was not pre-specified in the pre-analysis plan. We added this outcome post hoc after observing declines in pre-college effort.} Evidence from survey data on perceived returns to college indicate that this channel is unlikely to drive the decline in pre-college effort: we find no effects on expected earnings nor on awareness of financial aid (Appendix \ref{sec:perceived_returns}).\par 
-
 
 
 

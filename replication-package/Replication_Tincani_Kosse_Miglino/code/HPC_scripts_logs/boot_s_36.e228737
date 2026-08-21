@@ -1,0 +1,36 @@
+  Activating project at `~/uctpmt1/PACE/Bootstrap_replication`
+ERROR: LoadError: MethodError: Cannot `convert` an object of type Missing to an object of type Real
+The function `convert` exists, but no method is defined for this combination of argument types.
+
+Closest candidates are:
+  convert(::Type{T}, !Matched::CartesianIndex{1}) where T<:Number
+   @ Base multidimensional.jl:136
+  convert(::Type{T}, !Matched::AbstractChar) where T<:Number
+   @ Base char.jl:185
+  convert(::Type{T}, !Matched::Base.TwicePrecision) where T<:Number
+   @ Base twiceprecision.jl:271
+  ...
+
+Stacktrace:
+  [1] setindex!(A::Memory{Real}, x::Missing, i1::Int64)
+    @ Base ./genericmemory.jl:234
+  [2] unsafe_copyto!(dest::Memory{Real}, doffs::Int64, src::Memory{Union{Missing, Float32}}, soffs::Int64, n::Int64)
+    @ Base ./genericmemory.jl:144
+  [3] unsafe_copyto!
+    @ ./genericmemory.jl:124 [inlined]
+  [4] _copyto_impl!
+    @ ./array.jl:308 [inlined]
+  [5] copyto!
+    @ ./array.jl:294 [inlined]
+  [6] copyto!
+    @ ./array.jl:319 [inlined]
+  [7] copyto_axcheck!
+    @ ./abstractarray.jl:1167 [inlined]
+  [8] Array
+    @ ./array.jl:615 [inlined]
+  [9] (Array{Real})(A::Vector{Union{Missing, Float32}})
+    @ Core ./boot.jl:606
+ [10] top-level scope
+    @ ~/uctpmt1/PACE/Bootstrap_replication/Estimation_s_bootstrap36.jl:391
+in expression starting at /home/uctpmt1/uctpmt1/PACE/Bootstrap_replication/Estimation_s_bootstrap36.jl:391
+tar: Removing leading `/' from member names
